@@ -1,0 +1,15 @@
+com\shiant\study\common\itf\SystemDefaultInterface.class
+com\shiant\study\common\util\DateUtils.class
+com\shiant\study\core\system\service\impl\CarouselServiceImpl.class
+com\shiant\study\web\SwaggerConfig.class
+com\shiant\study\web\AuthorityInterceptor.class
+com\shiant\study\core\system\dao\CarouselDAO.class
+com\shiant\study\core\system\service\CarouselService.class
+com\shiant\study\core\system\transfer\CarouselTransfer.class
+com\shiant\study\web\util\SSOUtils.class
+com\shiant\study\core\system\dao\CarouselRepository.class
+com\shiant\study\core\system\model\Carousel.class
+com\shiant\study\core\system\dao\impl\CarouselDAOImpl.class
+com\shiant\study\web\controller\CarouselRESTService.class
+com\shiant\study\web\util\IWebUtils.class
+com\shiant\study\core\system\vo\CarouselVo.class
