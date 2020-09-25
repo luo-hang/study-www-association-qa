@@ -1,0 +1,207 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.shiant</groupId>
+  	<artifactId>study-www-association</artifactId>
+  	<version>1.0.0</version>
+  	<packaging>war</packaging>
+
+  	<name>management</name>
+  	<url>http://maven.apache.org</url>
+
+  	<properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<json.lib.ext.spring.version>1.0.2</json.lib.ext.spring.version>
+		<org.codehaus.jackson.version>1.8.4</org.codehaus.jackson.version>
+    	<maven.surefire.plugin.version>2.12.4</maven.surefire.plugin.version>
+		<maven.jetty.plugin.version>9.4.30.v20200611</maven.jetty.plugin.version>
+		<maven.compiler.plugin.version>1.8</maven.compiler.plugin.version>
+ 		<cors.filter.version>1.6</cors.filter.version>
+ 		<commons.fileupload.version>1.3</commons.fileupload.version>
+ 		<commons.io.version>2.4</commons.io.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.hibernate.version>4.3.11.Final</project.hibernate.version>
+  	</properties>
+  	
+  	<profiles>
+		<profile>
+			<id>DEV</id>
+			<properties>
+				<structure.mode>DEV</structure.mode>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>QA</id>
+			<properties>
+				<structure.mode>QA</structure.mode>			
+			</properties>
+		</profile>
+		<profile>
+			<id>PROD</id>
+			<properties>
+				<structure.mode>PROD</structure.mode>
+			</properties>
+		</profile>
+  	</profiles>
+  	
+  	<dependencies>
+  		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		    <version>1.2.8</version>         
+		</dependency>
+   		<dependency>
+        	<groupId>com.shiant</groupId>
+        	<artifactId>shiant-common-core</artifactId>
+        	<version>1.0.0</version>
+   		</dependency>
+   		<dependency>
+        	<groupId>com.shiant</groupId>
+        	<artifactId>shiant-common-rmi</artifactId>
+        	<version>1.0.0</version>
+   		</dependency>
+		<dependency>
+			<groupId>com.thetransactioncompany</groupId>
+			<artifactId>cors-filter</artifactId>
+			<version>${cors.filter.version}</version>
+		</dependency>
+		<dependency>  
+			<groupId>io.springfox</groupId>  
+			<artifactId>springfox-swagger2</artifactId>  
+       		<version>2.7.0</version>  
+    	</dependency>   
+    	<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${commons.fileupload.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.eclipse.jetty</groupId>
+		    <artifactId>jetty-jsp</artifactId>
+		    <version>9.2.30.v20200428</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		    <version>4.5.12</version>
+		</dependency>
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>2.4</version>
+		</dependency>
+		<!-- junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- hibernate对jpa的支持包 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${project.hibernate.version}</version>
+		</dependency>
+
+		<!-- c3p0 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>${project.hibernate.version}</version>
+		</dependency>
+
+		<!-- log日志 -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<!-- Mysql and MariaDB -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.15</version>
+		</dependency>
+  	</dependencies>
+  	<build>
+		<finalName>study-www-association</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<move file="${project.build.directory}/classes/META-INF/properties/sso-ext-${structure.mode}.properties"
+                                      tofile="${project.build.directory}/classes/sso-ext.properties"/>
+                             	<move file="${project.build.directory}/classes/META-INF/conf/${structure.mode}_dataSource.properties" 
+									  tofile="${project.build.directory}/classes/META-INF/dataSource.properties"/>
+								<move file="${project.build.directory}/classes/META-INF/cache/${structure.mode}_memcached.properties" 
+									  tofile="${project.build.directory}/classes/META-INF/memcached.properties"/>
+								<move file="${project.build.directory}/classes/META-INF/RMI/${structure.mode}_RMI.properties" 
+                                      tofile="${project.build.directory}/classes/META-INF/RMI.properties"/>
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven.surefire.plugin.version}</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${maven.jetty.plugin.version}</version> 
+				<!-- <configuration>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<httpConnector>
+						<port>60007</port>
+					</httpConnector>
+					<webApp>
+						<contextPath>/bucket</contextPath>
+					</webApp>
+				</configuration> -->
+				<configuration>
+					<scanIntervalSeconds>0</scanIntervalSeconds>
+					<httpConnector>
+						<port>60008</port>
+					</httpConnector>
+					<webAppConfig>
+             			<contextPath>/study-www-association</contextPath>
+             			<defaultsDescriptor>webdefault.xml</defaultsDescriptor>
+           			</webAppConfig>
+					<!-- <webDefaultXml>webdefault.xml</webDefaultXml> -->
+<!--					<connectors>-->
+<!--						<connector implementation="org.mortbay.jetty.bio.SocketConnector">-->
+<!--							<port>60008</port>-->
+<!--						</connector>-->
+<!--					</connectors> -->
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId> 
+				<configuration>
+					<source>${maven.compiler.plugin.version}</source>
+					<target>${maven.compiler.plugin.version}</target>
+				</configuration>
+			</plugin> 
+		</plugins>
+		
+	</build> 
+</project>
