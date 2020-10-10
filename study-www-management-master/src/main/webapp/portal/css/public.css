@@ -1,0 +1,286 @@
+body,
+dl,
+dd,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+input,
+textarea,
+p,
+hr,
+thead,
+tbody,
+tfoot,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+html {
+	-ms-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+body {
+	line-height: 1.5;
+	font-size: 14px;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: 'helvetica neue', tahoma, 'hiragino sans gb', stheiti, 'wenquanyi micro hei', \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+i,
+em {
+	font-style: normal;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table th,
+table td {
+	border: 1px solid #ddd;
+	padding: 5px;
+}
+.membership_img {
+	width: 40px;
+	height: 40px;
+	left:0;
+	top:150px;
+	position: fixed;
+	z-index: 1000;
+	background: url(../img/Navigation.png) no-repeat center center;
+} 
+.membership_img:hover .member_services {
+	display: block;
+}
+.member_services {
+	z-index: 100;
+	margin-top: 70px;
+	top: 58px;
+	left: 0;
+	display: none;
+	width: 140px;
+	height: 337px;
+	position: fixed;
+	border-radius: 0 8px 8px 0;
+	box-shadow: 1px 2px 2px #f4f4f4;
+	background: #FFFFFF;
+}
+
+.member_services h3 {
+	margin: 30px 0 35px 0;
+	text-align: center;
+	color: #39549D;
+}
+.member_services ul li a .member_lists {
+	width: 100px;
+	height: 20px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #FBFBFB;
+	padding-bottom: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+.member_services ul li a .member_lists img {
+	width: 18px;
+	height: 18px;
+	margin-right: 3px;
+}
+
+.member_btn button {
+	width: 110px;
+	height: 30px;
+	margin: 0 auto;
+	background-color: #39549D;
+	margin-bottom: 10px;
+	color: #FFFFFF;
+	border-radius: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+}
+
+.member_btn div font a {
+	color: #FFFFFF;
+}
+/* ......... */
+.link_box img{
+    width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin-top: 12px;
+}
+.nav_link {
+	width: 70px;
+	position: relative;
+	margin-right: 235px;
+}
+.link_box {
+	width: 70px;
+	height: 40px;
+	line-height: 40px;
+	display: flex;
+	justify-content: space-between;
+}
+.nav_link:hover .navtitle {
+	display: block;
+}
+
+.navtitle {
+	width: 100px;
+    height: 200px;
+    text-align: center;
+    position: absolute;
+    left: -4%;
+    z-index: 100;
+    background-color: white;
+    border: 1px solid rgb(38, 38, 38);
+    display: none;
+}
+.navtitle ul li{
+	padding: 3px 0;
+}
+.navtitle > ul > li > a{
+	width: 100%;
+	height: 22px;
+	display: inline-block;
+	color: rgb(38, 38, 38);
+}
+.navtitle > ul > li > a:hover{
+	background-color: rgb(38, 38, 38);
+	color: white;
+}
+
+table th {
+	font-weight: inherit;
+	border-bottom-width: 2px;
+	border-bottom-color: #ccc;
+}
+
+img {
+	border: 0 none;
+	width: auto\9;
+	max-width: 100%;
+	vertical-align: top;
+	height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+	cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+input:focus {
+	outline: none;
+}
+
+select[size],
+select[multiple],
+select[size][multiple] {
+	border: 1px solid #AAA;
+	padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+video,
+progress {
+	display: inline-block;
+}
+
+body {
+	background: #fff;
+}
+
+input::-webkit-input-speech-button {
+	display: none
+}
+
+button,
+input,
+textarea {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

@@ -1,0 +1,33 @@
+dataSrouce: 
+ driverClassName: com.mysql.cj.jdbc.Driver
+ #url: jdbc:mysql://rm-wz99z4cs6j3j1p8b7yo.mysql.rds.aliyuncs.com/shiant-pms?serverTimezone=Hongkong&useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false&verifyServerCertificate=false&autoReconnct=true&autoReconnectForPools=true&allowMultiQueries=true
+ url: jdbc:mysql://rm-wz99z4cs6j3j1p8b7yo.mysql.rds.aliyuncs.com/shiant-pms-test?serverTimezone=Hongkong&useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false&verifyServerCertificate=false&autoReconnct=true&autoReconnectForPools=true&allowMultiQueries=true
+ username: hqtsc
+ password: Hqtsc!2019
+ #url: jdbc:mysql://localhost:3306/shiant-pms?serverTimezone=Hongkong&useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false&verifyServerCertificate=false&autoReconnct=true&autoReconnectForPools=true&allowMultiQueries=true
+ #username: root
+ #password: root
+ druid: 
+  #最大连接池数量
+  maxActive: 50
+  #初始化时建立物理连接的个数
+  initialSize: 5
+  #获取连接时最大等待时间，单位毫秒
+  maxWait: 60000
+  #最小连接池数量
+  minIdle: 5
+  #间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+  timeBetweenEvictionRunsMillis: 3000
+  #一个连接在池中最小生存的时间，单位是毫秒
+  minEvictableIdleTimeMillis: 300000
+
+memcached:
+ host1: 127.0.0.1
+ port1: 11211
+ node: 127.0.0.1:11211
+
+rmi: 
+ registryPort: 30002
+ servicePort: 40002
+
+ 

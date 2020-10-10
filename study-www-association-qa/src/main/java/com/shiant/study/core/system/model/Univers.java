@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 
 @Entity
-@Table(name = "t_sys_univers_copy1")
+@Table(name = "t_sys_univers")
 public class Univers extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 4017357267843186648L;
@@ -54,9 +54,6 @@ public class Univers extends BaseEntity implements Serializable {
 
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
 
     public Long getUnId() {
         return unId;

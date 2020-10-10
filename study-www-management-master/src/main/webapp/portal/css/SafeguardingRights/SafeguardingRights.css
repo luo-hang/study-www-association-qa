@@ -1,0 +1,138 @@
+.main {
+    width: 100%;
+    border-top: 1px solid #39519D;
+}
+.content {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.bannerImg {
+    width: 100%;
+    height: 80px;
+    margin: 20px 0;
+    line-height: 80px;
+    text-align: center;
+    color: white;
+    background-color: rgb(173, 20, 20);
+}
+.contentBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.contentLeft {
+    width: 75%;
+    padding: 0 20px 0 0;
+}
+/* table切换 */
+.table_nav {
+    width: 400px;
+    height: 40px;
+    display: flex;
+}
+.table_nav > div{
+    width: 130px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: white;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+.table_nav > div.active{
+    color: #39519D;
+}
+/* table切换 */
+.table_title {
+    width: 100%;
+}
+.titleBox {
+    display: none;
+    padding-right: 20px;
+}
+.titleBox.active1 {
+    display: block;
+}
+.title_list {
+    width: 100%;
+    margin-top: 30px;
+}
+.top_title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.toExamine {
+    width: 50px;
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+    color: white;
+    background-color: rgb(87, 240, 73);
+}
+.data {
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    color: #999;
+}
+.section {
+    margin: 10px 0;
+    font-size: 18px;
+}
+.section > p{
+    margin: 10px 0;
+    font-size: 14px;
+}
+.complaint {
+    width: 212px;
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    color: #999;
+}
+.complaint >p {
+    margin-right: 15px;
+}
+.contentRight {
+    width: 25%;
+}
+.userName {
+    height: 300px;
+    border: 1px solid rgba(153, 153, 153, 0.385);
+    text-align: center;
+}
+.userName > img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 25px 25%;
+}
+.userName > p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.userName > a {
+    width: 139px;
+    height: 30px;
+   line-height: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+    color: white;
+    background-color: #39519D;
+    display: inline-block;
+
+}
+.bgcImg {
+    height: 150px;
+    width: 100%;
+    margin: 20px 0;
+    background-color: #39519D;
+}
+.bgcLogo {
+    height: 100px;
+    width: 100%;
+    margin: 20px 0;
+    background-color: #39519D;
+}   

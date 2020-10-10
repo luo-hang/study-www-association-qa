@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../jpa-day3-onetomany/jpa-day3-onetomany.iml" filepath="$PROJECT_DIR$/../jpa-day3-onetomany/jpa-day3-onetomany.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpa-day4-manytomany.iml" filepath="$PROJECT_DIR$/jpa-day4-manytomany.iml" />
+    </modules>
+  </component>
+</project>

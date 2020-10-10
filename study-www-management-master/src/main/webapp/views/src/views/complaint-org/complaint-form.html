@@ -1,0 +1,401 @@
+
+<form class="layui-form" lay-filter="layuiadmin-complaint-form"
+	id="layuiadmin-complaint-form" style="padding: 20px 30px 0 0;">
+	<div class="layui-form-item">
+		<label class="layui-form-label lang" data-lang="投诉机构"><span class="red-star">*</span></label>
+		<div class="layui-input-block">
+			<script type="text/html" template>
+          		<input type="text" name="orgName" value="{{ d.params.orgName || '' }}" lay-verify="required" placeholder="{{ shiant.l("请输入") }}{{ shiant.l("投诉机构") }}" autocomplete="off" class="layui-input">
+        	</script>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label lang" data-lang="维权类型"><span class="red-star">*</span></label>
+		<div class="layui-input-block">
+		<script type="text/html" template>
+	      <input type="checkbox" name="type" value="高利贷" title="{{ shiant.l("高利贷") }}">
+	      <input type="checkbox" name="type" value="骚扰" title="{{ shiant.l("骚扰") }}">
+	      <input type="checkbox" name="type" value="暴力催收" title="{{ shiant.l("暴力催收") }}">
+	      <input type="checkbox" name="type" value="砍头息" title="{{ shiant.l("砍头息") }}">
+	      <input type="checkbox" name="type" value="电话骚扰" title="{{ shiant.l("电话骚扰") }}">
+	      <input type="checkbox" name="type" value="欺骗消费者" title="{{ shiant.l("欺骗消费者") }}">
+	      <input type="checkbox" name="type" value="盗取用户信息" title="{{ shiant.l("盗取用户信息") }}">
+	      <input type="checkbox" name="type" value="客服不处理/处理不当" title="{{ shiant.l("客服不处理/处理不当") }}">
+	      <input type="checkbox" name="type" value="态度恶劣" title="{{ shiant.l("态度恶劣") }}">
+	      <input type="checkbox" name="type" value="侮辱" title="{{ shiant.l("侮辱") }}">
+	      <input type="checkbox" name="type" value="威胁恐吓" title="{{ shiant.l("威胁恐吓") }}">
+	      <input type="checkbox" name="type" value="阴阳合同" title="{{ shiant.l("阴阳合同") }}">
+	      <input type="checkbox" name="type" value="欺诈" title="{{ shiant.l("欺诈") }}">
+	      <input type="checkbox" name="type" value="退款问题" title="{{ shiant.l("退款问题") }}">
+	      <input type="checkbox" name="type" value="服务不到位/态度差" title="{{ shiant.l("服务不到位/态度差") }}">
+	      <input type="checkbox" name="type" value="虚假/误导宣传" title="{{ shiant.l("虚假/误导宣传") }}">
+	      <input type="checkbox" name="type" value="收费问题" title="{{ shiant.l("收费问题") }}">
+		</script>
+	    </div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label lang" data-lang="维权诉求"><span class="red-star">*</span></label>
+		<div class="layui-input-block">
+		<script type="text/html" template>
+	      <input type="checkbox" name="need" value="停止骚扰" title="{{ shiant.l("停止骚扰") }}">
+	      <input type="checkbox" name="need" value="道歉" title="{{ shiant.l("道歉") }}">
+	      <input type="checkbox" name="need" value="作出处罚" title="{{ shiant.l("作出处罚") }}">
+	      <input type="checkbox" name="need" value="赔偿" title="{{ shiant.l("赔偿") }}">
+	      <input type="checkbox" name="need" value="快速处理" title="{{ shiant.l("快速处理") }}">
+	      <input type="checkbox" name="need" value="调整利率" title="{{ shiant.l("调整利率") }}">
+	      <input type="checkbox" name="need" value="依法追究责任" title="{{ shiant.l("依法追究责任") }}">
+	      <input type="checkbox" name="need" value="退款" title="{{ shiant.l("退款") }}">
+	      <input type="checkbox" name="need" value="销账" title="{{ shiant.l("销账") }}">
+	      <input type="checkbox" name="need" value="公平给出解释" title="{{ shiant.l("公平给出解释") }}">
+	      <input type="checkbox" name="need" value="解释" title="{{ shiant.l("解释") }}">
+	      <input type="checkbox" name="need" value="下架产品" title="{{ shiant.l("下架产品") }}">
+	      <input type="checkbox" name="need" value="加强对平台的管理" title="{{ shiant.l("加强对平台的管理") }}">
+	      <input type="checkbox" name="need" value="退费" title="{{ shiant.l("退费") }}">
+	      <input type="checkbox" name="need" value="改善服务" title="{{ shiant.l("改善服务") }}">
+		</script>
+	    </div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label lang" data-lang="投诉标题"><span class="red-star">*</span></label>
+		<div class="layui-input-block">
+			<script type="text/html" template>
+          <input type="text" name="title" value="{{ d.params.title || '' }}" lay-verify="required" placeholder="{{ shiant.l("请输入") }}{{ shiant.l("投诉标题") }}" autocomplete="off" class="layui-input">
+        </script>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label lang" data-lang="投诉详细"><span class="red-star">*</span></label>
+		<div class="layui-input-block">
+			<script type="text/html" template>
+          		<textarea id="content" type="text" name="content" lay-verify="content" placeholder="{{ shiant.l("请输入") }}{{ shiant.l("投诉详细") }}" autocomplete="off" class="layui-textarea">{{ d.params.content || '' }}</textarea>
+        	</script>
+		</div>
+	</div>
+	<div class="layui-form-item">
+      <label class="layui-form-label lang" data-lang="上传图片"></label>
+      <div class="layui-input-block" >
+	     <div class="layui-upload" style="margin: 0 10px;">
+	     	<button type="button" class="layui-btn lang" id="image-upload" data-lang="上传图片"></button>
+	     	<button type="button" class="layui-btn layui-btn-disabled lang" id="image-upload-start" data-lang="开始上传"  disabled="disabled"></button>
+	        <div class="layui-upload-list">
+        		<table class="layui-table" style="text-align: center;">
+               		<thead>
+             			<tr>
+                       		<th style="text-align: center;">图片预览</th>
+                        	<th style="text-align: center;">大小</th>
+                          	<th style="text-align: center;">状态</th>
+                           	<th style="text-align: center;">操作</th>
+                     	</tr>
+                	</thead>
+                 	<tbody id="imgList"></tbody>
+             	</table>
+        	</div>
+	    </div> 
+	    <script type="text/html" template>
+				<input type="text" name="imageFile1" value="{{ d.params.imageFile1 || '' }}" class="layui-input" style="display: none;">
+				<input type="text" name="imageFile2" value="{{ d.params.imageFile2 || '' }}" class="layui-input" style="display: none;">
+				<input type="text" name="imageFile3" value="{{ d.params.imageFile3 || '' }}" class="layui-input" style="display: none;">
+				<input type="text" name="imageFile4" value="{{ d.params.imageFile4 || '' }}" class="layui-input" style="display: none;">
+				<input type="text" name="imageFile5" value="{{ d.params.imageFile5 || '' }}" class="layui-input" style="display: none;">
+				<input type="text" name="imageFile6" value="{{ d.params.imageFile6 || '' }}" class="layui-input" style="display: none;">
+				<input type="text" name="imageFile7" value="{{ d.params.imageFile7 || '' }}" class="layui-input" style="display: none;">
+				<input type="text" name="imageFile8" value="{{ d.params.imageFile8 || '' }}" class="layui-input" style="display: none;">
+				<input type="text" name="imageFile9" value="{{ d.params.imageFile9 || '' }}" class="layui-input" style="display: none;">
+				<input type="text" name="imageFile10" value="{{ d.params.imageFile10 || '' }}" class="layui-input" style="display: none;">
+        </script>
+	    <div class="layui-form-item">
+	      <div class="lang" data-lang="投诉图片温馨提示" style="color: #c2c2c2;margin:10px 0;padding-left: 100px;"></div>
+	    </div>
+      </div>
+    </div>
+	<div class="layui-form-item">
+      <label class="layui-form-label lang" data-lang="上传视频"></label>
+      <div class="layui-input-block" >
+      	<div class="layui-row">
+	    	<div class="layui-upload" style="margin: 0 10px;">
+		     	<button type="button" class="layui-btn lang" id="video-upload" data-lang="上传视频"></button>
+		     	<button type="button" class="layui-btn layui-btn-disabled lang" id="video-upload-start" data-lang="开始上传"  disabled="disabled"></button>
+		        <div class="layui-upload-list">
+	        		<table class="layui-table" style="text-align: center;">
+	               		<thead>
+	             			<tr>
+	                       		<th style="text-align: center;">文件名</th>
+	                        	<th style="text-align: center;">大小</th>
+	                          	<th style="text-align: center;">状态</th>
+	                           	<th style="text-align: center;">操作</th>
+	                     	</tr>
+	                	</thead>
+	                 	<tbody id="videoList"></tbody>
+	             	</table>
+	        	</div>
+		    </div>
+	     	<script type="text/html" template>
+				<input type="text" name="videoFile1" value="{{ d.params.videoFile1 || '' }}" class="layui-input" style="display: none;">
+				<input type="text" name="videoFile2" value="{{ d.params.videoFile2 || '' }}" class="layui-input" style="display: none;">
+				<input type="text" name="videoFile3" value="{{ d.params.videoFile3 || '' }}" class="layui-input" style="display: none;">
+        	</script>
+      	</div>
+      	<div class="layui-form-item">
+	      <div class="lang" data-lang="投诉视频温馨提示" style="color: #c2c2c2;margin:10px 0;padding-left: 100px;"></div>
+	    </div>
+      </div>
+    </div>
+	<script type="text/html" template>
+      <input type="hidden" name="cid" value="{{ d.params.cid || '' }}">
+    </script>
+	<div class="layui-form-item">
+		<label class="layui-form-label"></label>
+		<div class="layui-input-inline">
+			<input type="button" lay-submit lay-filter="layuiadmin-complaint-form-submit" value="确认" class="layui-btn">
+		</div>
+	</div>
+</form>
+<script type="text/html" template lay-done="layui.data.sendParams(d.params)">
+</script>
+<script>
+layui.data.sendParams = function(params){
+	layui.use([ 'admin', 'upload', 'form'], function() {
+	    upload = layui.upload
+		form = layui.form;
+		
+	    var d = {
+			"content":params.content,
+	    	"type":params.type
+	    }
+		form.val('layuiadmin-complaint-form', d);
+		//$('textarea[name="content"]').val(params.content);
+
+		var imgListView = $('#imgList');
+        var imgTotalArray = new Array();
+		uploadImgListIns = upload.render({
+			 elem: '#image-upload'
+			,url: shiant.getResHttpPrefix()+'/image?path=/study/management/complaint'
+			,accept: 'images' 
+			,acceptMime: 'image/*'
+			,size: 1024*5 
+			,multiple: true
+			,number: 10
+			,auto: false
+			,bindAction: '#image-upload-start' 
+			,choose: function(obj){
+				var files = this.files = obj.pushFile(); //将每次选择的文件追加到文件队列
+                var arr = Object.keys(files);
+                imgTotalArray = imgTotalArray.concat(arr);
+                if (imgTotalArray.length <= 10) {
+                    obj.preview(function (index, file, result) {
+                        var tr = $(['<tr id="upload-' + index + '">'
+                            , '<td><img src="' + result + '" alt="' + file.name + '" class="layui-upload-img" style="height: 66px;width:100px;"></td>'
+                            , '<td>' + (file.size / 1014).toFixed(1) + 'kb</td>'
+                            , '<td>'+shiant.l("等待上传")+'</td>'
+                            , '<td>'
+                            , '<button class="layui-btn img-reload layui-hide">'+shiant.l("重试")+'</button>'
+                            , '<button class="layui-btn layui-btn-danger img-delete">'+shiant.l("删除")+'</button>'
+                            , '</td>'
+                            , '</tr>'].join(''));
+                        tr.find('.img-reload').on('click', function () {
+                            obj.upload(index, file);
+                        });
+                        tr.find('.img-delete').on('click', function () {
+                            delete files[index];
+                            tr.remove();
+                            uploadImgListIns.config.elem.next()[0].value = ''; 
+                        });
+                        imgListView.append(tr);
+                    });
+                    $("#image-upload-start").removeClass("layui-btn-disabled");
+                    $("#image-upload-start").removeAttr("disabled");
+                } else {
+                    layer.msg(shiant.l("上传文件过多"));
+                }
+			}
+			,before: function(obj){
+				var files = this.files = obj.pushFile();
+				if(files){
+					layer.msg(shiant.l("上传中"),{time:200000});
+				}
+			}
+			,done: function(res, index, upload){
+                if (res.url) {
+                    var tr = imgListView.find('tr#upload-' + index)
+                        , tds = tr.children();
+                    tds.eq(2).html('<span style="color: #5FB878;">'+shiant.l("上传成功")+'</span>');
+                    tds.eq(3).html(''); 
+                	$('input[name="imageFile'+(tr.index()+1)+'"]').val(res.url);
+                    return delete this.files[index];
+                }
+                this.error(index, upload);
+			}
+			,allDone: function(obj){
+				$("#image-upload-start").attr("disabled","disabled");
+				$("#image-upload-start").addClass("layui-btn-disabled");
+				layer.close(layer.index);
+			}
+			,error: function (index, upload) {
+	     		var tr = imgListView.find('tr#upload-' + index)
+	           		, tds = tr.children();
+	        	tds.eq(2).html('<span style="color: #FF5722;">'+shiant.l("上传失败")+'</span>');
+	        	tds.eq(3).find('.img-reload').removeClass('layui-hide');
+	      	}
+		});	
+
+		var videoListView = $('#videoList');
+        var videoTotalArray = new Array();
+		uploadVideoListIns = upload.render({
+			 elem: '#video-upload'
+			,url: shiant.getResHttpPrefix()+'/video?path=/study/management/complaint'
+			,accept: 'video' 
+			,acceptMime: 'video/*'
+			,size: 1024*100 
+			,multiple: true
+			,number: 3
+			,auto: false
+			,bindAction: '#video-upload-start' 
+			,choose: function(obj){
+				var files = this.files = obj.pushFile(); //将每次选择的文件追加到文件队列
+                var arr = Object.keys(files);
+                videoTotalArray = videoTotalArray.concat(arr);
+                if (videoTotalArray.length <= 3) {
+                    obj.preview(function (index, file, result) {
+                        var tr = $(['<tr id="upload-' + index + '">'
+                            , '<td>'+ file.name +'</td>'
+                            , '<td>' + (file.size / 1014).toFixed(1) + 'kb</td>'
+                            , '<td>'+shiant.l("等待上传")+'</td>'
+                            , '<td>'
+                            , '<button class="layui-btn video-reload layui-hide">'+shiant.l("重试")+'</button>'
+                            , '<button class="layui-btn layui-btn-danger video-delete">'+shiant.l("删除")+'</button>'
+                            , '</td>'
+                            , '</tr>'].join(''));
+                        tr.find('.video-reload').on('click', function () {
+                            obj.upload(index, file);
+                        });
+                        tr.find('.video-delete').on('click', function () {
+                            delete files[index];
+                            tr.remove();
+                            uploadVideoListIns.config.elem.next()[0].value = ''; 
+                        });
+                        videoListView.append(tr);
+                    });
+                    $("#video-upload-start").removeClass("layui-btn-disabled");
+                    $("#video-upload-start").removeAttr("disabled");
+                } else {
+                    layer.msg(shiant.l("上传文件过多"));
+                }
+			}
+			,before: function(obj){
+				var files = this.files = obj.pushFile();
+				if(files){
+					layer.msg(shiant.l("上传中"),{time:200000});
+				}
+			}
+			,done: function(res, index, upload){
+                if (res.url) {
+                    var tr = videoListView.find('tr#upload-' + index)
+                        , tds = tr.children();
+                    tds.eq(2).html('<span style="color: #5FB878;">'+shiant.l("上传成功")+'</span>');
+                    tds.eq(3).html(''); 
+                	$('input[name="videoFile'+(tr.index()+1)+'"]').val(res.url);
+                    return delete this.files[index];
+                }
+                this.error(index, upload);
+			}
+			,allDone: function(obj){
+				$("#video-upload-start").attr("disabled","disabled");
+				$("#video-upload-start").addClass("layui-btn-disabled");
+				layer.close(layer.index);
+			}
+			,error: function (index, upload) {
+	     		var tr = videoListView.find('tr#upload-' + index)
+	           		, tds = tr.children();
+	        	tds.eq(2).html('<span style="color: #FF5722;">'+shiant.l("上传失败")+'</span>');
+	        	tds.eq(3).find('.video-reload').removeClass('layui-hide');
+	      	}
+		});	
+		
+		for(var x=1;x<1;x++){
+	    	 upload.render({
+		    	 elem: '#image'+x+'-upload'
+				,url: shiant.getResHttpPrefix()+'/image?path=/study/management/complaint'
+				,accept: 'images' 
+				,acceptMime: 'image/*'
+				,size: 1024*5 
+				,before: function(obj){
+					layer.msg(shiant.l("上传中"),{time:200000});
+					var uid = $(this.elem).data("uid");
+					obj.preview(function(index, file, result){
+				    	$('#image'+uid+'-upload-img').attr('src', result); 
+					});
+				 }
+		    	 ,done: function(res){
+					if(res.code > 0){
+						return layer.msg(shiant.l("上传失败"));
+					}
+					layer.close(layer.index);
+					var uid = $(this.elem).data("uid");
+					$('input[name="imageFile'+uid+'"]').val(res.url);
+					$('#image'+(uid+1)+'-upload').parent().removeClass('layui-hide');
+				}
+		    	,error: function(){
+		    		 var uid = $(this.elem).data("uid");
+					 var demoText = $('#imageFile'+uid+'-upload-text');
+					 demoText.html('<span style="color: #FF5722;">'+shiant.l("上传失败")+'</span>');
+				}
+		    });	
+	    }
+
+		for(var x=1;x<1;x++){
+	    	 upload.render({
+		    	 elem: '#video'+x+'-upload'
+				,url: shiant.getResHttpPrefix()+'/video?path=/study/management/complaint'
+				,accept: 'video' 
+				,acceptMime: 'video/*'
+				,size: 1024*50 
+				,before: function(obj){
+					layer.msg(shiant.l("上传中"),{time:200000});
+					var uid = $(this.elem).data("uid");
+					obj.preview(function(index, file, result){
+				    	$('#video'+uid+'-upload-video').append('<video controls="controls" src="'+result+'" style="width:100%"></video>'); 
+					});
+				 }
+		    	 ,done: function(res){
+					if(res.code > 0){
+						return layer.msg(shiant.l("上传失败"));
+					}
+					layer.close(layer.index);
+					var uid = $(this.elem).data("uid");
+					$('input[name="videoFile'+uid+'"]').val(res.url);
+					$('#video'+(uid+1)+'-upload').parent().removeClass('layui-hide');
+				}
+		    	,error: function(){
+		    		 var uid = $(this.elem).data("uid");
+					 var demoText = $('#videoFile'+uid+'-upload-text');
+					 demoText.html('<span style="color: #FF5722;">'+shiant.l("上传失败")+'</span>');
+				}
+		    });	
+	    }
+		
+	    initFormTypeData = function (keyWord) {
+			$.ajax({
+				url:layui.setter.url+'/service/complaintType/getBeans?page=1&limit=20'+
+						(keyWord?"&name="+encodeURIComponent(encodeURIComponent(keyWord)):""),
+				type:"GET",
+				dataType:"json",
+				success:function(data){
+					var html = '';
+					for(var i=0;i<data.data.length;i++){
+						html = html+"<option value='"+data.data[i].vtid+"'>" + data.data[i].name +"</option>"
+					}
+					$("#form-type-list").empty().append(html);
+					/* if(orgid_){
+						$("#type-list").val(orgid_);
+					} */
+					form.render('select'); 
+				},
+				error:function(data){
+					layer.msg(shiant.l(data.msg));
+				}
+			});
+		}
+	   // initFormTypeData();
+	});
+}
+</script>

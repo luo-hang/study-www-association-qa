@@ -1,0 +1,248 @@
+<style>
+.content{
+	line-height: 35px;
+}
+</style>
+
+<title class="lang" data-lang="投诉列表"></title>
+
+<div class="layui-card layadmin-header">
+	<div class="layui-breadcrumb" lay-filter="breadcrumb">
+		<a lay-href="" class="lang" data-lang="主页"></a> 
+		<a><cite class="lang" data-lang="维权管理"></cite></a> 
+		<a><cite class="lang" data-lang="投诉列表"></cite></a> 
+		<a><cite class="lang" data-lang="投诉详细"></cite></a>
+	</div>
+</div>
+
+<div class="layui-fluid">
+	<div class="layui-card">
+		<form class="layui-form" style="padding: 20px 30px 10px 0;">
+			<div class="layui-form-item" id="status">
+				<h2 class="layui-form-label lang" style="width: auto;" data-lang="维权事件"></h2>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label lang" data-lang="投诉机构"></label>
+				<div class="layui-input-block">
+					<div class="content">
+						<p id="orgName"></p>
+					</div>
+					<hr>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label lang" data-lang="投诉标题"></label>
+				<div class="layui-input-block">
+					<div class="content">
+						<p id="title"></p>
+					</div>
+					<hr>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label lang" data-lang="维权类型"></label>
+				<div class="layui-input-block">
+					<div class="content" id="type">
+						<!-- <span class="layui-badge-rim">{{ item }}</span> -->
+					</div>
+					<hr>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label lang" data-lang="维权诉求"></label>
+				<div class="layui-input-block">
+					<div class="content" id="need">
+					</div>
+					<hr>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label lang" data-lang="投诉详细"></label>
+				<div class="layui-input-block">
+					<div class="content" id="detail">
+					</div>
+					<hr>
+				</div>
+			</div>
+			<hr class="layui-bg-gray">
+			<div class="layui-form-item">
+				<h2 class="layui-form-label lang" style="width: auto;" data-lang="投诉人详细"></h2>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label lang" data-lang="用户账号"></label>
+				<div class="layui-input-block">
+					<div class="content">
+						<p id="creater"></p>
+					</div>
+					<hr>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label lang" data-lang="用户姓名"></label>
+				<div class="layui-input-block">
+					<div class="content">
+						<p id="userRealName"></p>
+					</div>
+					<hr>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label lang" data-lang="联系方式"></label>
+				<div class="layui-input-block">
+					<div class="content" id="contact">
+					</div>
+					<hr>
+				</div>
+			</div>
+			<div class="layui-form-item" id="btnDiv" style="display: none;">
+				<hr class="layui-bg-gray">
+				<label class="layui-form-label"></label>
+				<div class="layui-input-block">
+					<button type="button" class="layui-btn layui-btn-normal lang"
+						id="invalidBtn" data-lang="无效事件"></button>
+					<button type="button" class="layui-btn lang" id="okBtn"
+						data-lang="确定受理"></button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<script>
+layui.use([ 'admin', 'form'], function() {
+	var router = layui.router();
+	initData = function(){
+		$.ajax({
+			url:layui.setter.url+'/service/complaint/getBeanWithUser?id='+router.search.id,
+			type:"GET",
+			dataType:"json",
+			success:function(data){
+				$("#orgName").html(data.bean.orgName);
+				$("#title").html(data.bean.title);
+				var html = "";
+				var type = data.bean.type.split(";");
+				for(var i=0;i<type.length;i++){
+					if(type[i]!=""){
+						html = html + '<span class="layui-badge-rim" style="margin:0 5px">'+type[i]+'</span>';
+					}
+				}
+				$("#type").append(html);
+				html = "";
+				var need = data.bean.need.split(";");
+				for(var i=0;i<need.length;i++){
+					if(need[i]!=""){
+						html = html + '<span class="layui-badge-rim" style="margin:0 5px">'+need[i]+'</span>';
+					}
+				}
+				$("#need").append(html);
+				html = "<p>"+data.bean.content+"</p>";
+				for(var i=1;i<11;i++){
+					if(data.bean["imageFile"+i]!=null&&data.bean["imageFile"+i]!=""){
+						html = html+ '<div class="layui-col-xs2">';
+						html = html+ '<img class="layui-upload-img photo" style="width: 100%;" src="'+data.bean["imageFile"+i]+'">';
+						html = html+ '</div>';
+					}
+				}
+				html = html+ '<hr style="background-color: #fff;">';
+				for(var i=1;i<4;i++){
+					if(data.bean["videoFile"+i]!=null&&data.bean["videoFile"+i]!=""){
+						html = html+ '<div class="layui-col-xs4">';
+						html = html+ '<video controls="controls" src="'+data.bean["videoFile"+i]+'" style="width:100%"></video>';
+						html = html+ '</div>';
+					}
+				}
+				$("#detail").append(html);
+				var creater = data.bean.creater;
+				if(!data.user.orgid){
+					creater = creater + "	(用户)";
+				}else{
+					creater = creater + "	(机构)";
+				}
+				$("#creater").html(creater);
+				$("#userRealName").html(data.user.userRealName);
+				html = "";
+				if(data.user.phone!=null&&data.user.phone!=""){
+					html = html + '<span class="layui-badge-rim" style="margin:0 10px">'+data.user.phone+'</span>';
+				}
+				if(data.user.email!=null&&data.user.email!=""){
+					html = html + '<span class="layui-badge-rim" style="margin:0 10px">'+data.user.email+'</span>';
+				}
+				$("#contact").append(html);
+				if(data.bean.status==0){
+					$("#btnDiv").show();
+				}
+				if(data.bean.status==1){
+					$("#status").append('<span class="layui-badge layui-bg-green">'+shiant.l("已受理")+'</span>');
+				}
+				if(data.bean.status==-1){
+					$("#status").append('<span class="layui-badge layui-bg-gray">'+shiant.l("无效")+'</span>');
+				}
+				$('.photo').unbind("click");
+				$('.photo').on('click', function () {
+					layer.open({
+			            type: 1,
+			            title: false,
+			            closeBtn: 0,
+			            shadeClose: true,
+			            area: ['80%', '80%'], //宽高
+			            content: "<img src=" + this.src + " />"
+			        });
+				})
+			},
+			error:function(data){
+				layer.msg(shiant.l(data.msg));
+			}
+		});
+	}
+	
+	$('#invalidBtn').on('click', function () {
+		layer.open({
+			title: shiant.l('无效事件'),
+			area: ['500px', '400px'],
+			content: '<div><p>'+shiant.l('无效事件详细')+'</p><textarea id="remark" class="layui-textarea" style="height:200px;"></textarea></div>',
+			btn:['确认','取消'],
+			yes: function (index, layero) {
+				var value1 = $('#remark').val();
+				var data = '{"id":'+router.search.id+',"status":-1 ,"reason":"'+value1+'"}';
+				$.ajax({
+					url:layui.setter.url+'/service/complaint/updateStatus',
+					type:"POST",
+					dataType:"json",
+					data:data,
+					contentType: "application/json; charset=utf-8",
+					success:function(data){
+						layer.msg(shiant.l(data.msg));
+						location.reload();
+					},
+					error:function(data){
+						layer.msg(shiant.l(data.msg));
+					}
+				});
+			}
+		})
+		
+	})
+	$('#okBtn').on('click', function () {
+		layer.confirm(shiant.l('确定受理详细'),{title:shiant.l('确定受理')}, function(index){
+			var data = '{"id":'+router.search.id+',"status":1}';
+			$.ajax({
+				url:layui.setter.url+'/service/complaint/updateStatus',
+				type:"POST",
+				dataType:"json",
+				data:data,
+				contentType: "application/json; charset=utf-8",
+				success:function(data){
+					layer.msg(shiant.l(data.msg));
+					location.reload();
+				},
+				error:function(data){
+					layer.msg(shiant.l(data.msg));
+				}
+			});
+			layer.close(index);
+		});
+	})
+	
+	initData();
+	shiant.translate();
+});
+</script>

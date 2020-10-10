@@ -1,0 +1,205 @@
+  <style>
+  	.layui-form-item .layui-input-inline {
+	    width: 500px;
+	}
+	.layui-form-label {
+	    float: left;
+	    width: 120px;
+	}
+  </style>
+
+  <title class="lang" data-lang="问题列表"></title>
+  
+  <div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+      <a lay-href="" class="lang" data-lang="主页"></a>
+      <a><cite class="lang" data-lang="机构设置"></cite></a>
+      <a><cite class="lang" data-lang="初次完善"></cite></a>
+    </div>
+  </div>
+
+  <div class="layui-fluid">
+    <div class="layui-card">
+      <div class="layui-card-body">
+      	<div class="layui-tab layui-tab-brief" lay-filter="organization-tab-brief-filter">
+		  <ul class="layui-tab-title" style="pointer-events: none;">
+		    <li lay-id="1" class="layui-this lang" data-lang="企业信息"></li>
+		    <li lay-id="2" class="lang" data-lang="提交资质"></li>
+		  </ul>
+		  <div class="layui-tab-content">
+		  	<div class="layui-tab-item layui-show">
+		  		<form class="layui-form" lay-filter="layuiadmin-organization-base-form" id="layuiadmin-organization-base-form" style="padding: 20px 30px 0 0;">
+					<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+					  <legend>机构基本信息</legend>
+					</fieldset>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="机构名称"><span class="red-star">*</span></label>
+						<div class="layui-input-inline">
+							<input type="text" name="orgName" lay-verify="required" placeholder="请输入机构名称" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="创建时间"></label>
+						<div class="layui-input-inline">
+							 <input type="text" name="foundDate" id="foundDate" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="机构简介"></label>
+						<div class="layui-input-inline">
+          					<textarea type="text" name="orgIntroduction" placeholder="请输入机构简介" autocomplete="off" class="layui-textarea"></textarea>
+						</div>
+					</div>
+					<div class="layui-form-item">
+				      <label class="layui-form-label lang" data-lang="机构LOGO"></label>
+				      <div class="layui-input-inline" >
+					  	<div class="layui-upload">
+				     		<button type="button" class="layui-btn layui-btn-normal lang" id="logo-upload" data-lang="上传图片"></button>
+				       		<div class="layui-upload-list">
+				      			<img class="layui-upload-img" id="logo-upload-img" style="width: 200px;" src="">
+				          		<p id="logo-upload-text"></p>
+				       		</div>
+				    	</div> 
+						<input type="text" name="orgLogo" class="layui-input" style="display: none;">
+				      </div>
+				    </div>
+				    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+					  <legend>机构联系方式</legend>
+					</fieldset>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="详细地址"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="address" placeholder="请输入详细地址" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="咨询电话"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="consultationPhone" placeholder="请输入咨询电话" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="机构网址"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="website" placeholder="请输入机构网址" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="客服QQ"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="qq" placeholder="请输入客服QQ" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="客服微信"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="wechat" placeholder="请输入客服微信" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+				      <label class="layui-form-label lang" data-lang="微信二维码"></label>
+				      <div class="layui-input-inline" >
+					  	<div class="layui-upload">
+				     		<button type="button" class="layui-btn layui-btn-normal lang" id="wechat-upload" data-lang="上传图片"></button>
+				       		<div class="layui-upload-list">
+				      			<img class="layui-upload-img" id="wechat-upload-img" style="width: 200px;" src="">
+				          		<p id="wechat-upload-text"></p>
+				       		</div>
+				    	</div> 
+						<input type="text" name="wechatQrCode" class="layui-input" style="display: none;">
+				      </div>
+				    </div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="微信公众号"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="wechatMp" placeholder="请输入微信公众号" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+				      <label class="layui-form-label lang" data-lang="公众号二维码"></label>
+				      <div class="layui-input-inline" >
+					  	<div class="layui-upload">
+				     		<button type="button" class="layui-btn layui-btn-normal lang" id="mp-upload" data-lang="上传图片"></button>
+				       		<div class="layui-upload-list">
+				      			<img class="layui-upload-img" id="mp-upload-img" style="width: 200px;" src="">
+				          		<p id="logo-upload-text"></p>
+				       		</div>
+				    	</div> 
+						<input type="text" name="wechatMpQrCode" class="layui-input" style="display: none;">
+				      </div>
+				    </div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="官方微博"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="weibo" placeholder="请输入官方微博" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+      				<input type="hidden" name="orgid" >
+					<div class="layui-form-item">
+						<label class="layui-form-label"></label>
+						<div class="layui-input-inline">
+							<button id="nextStepBtn" type="button" class="layui-btn layui-btn-normal lang" data-lang="确认,下一步"></button>
+						</div>
+					</div>
+				</form>
+			</div>
+   	 		<div class="layui-tab-item">
+   	 			<form class="layui-form" lay-filter="layuiadmin-organization—detail-form" id="layuiadmin-organization—detail-form" style="padding: 20px 30px 0 0;">
+					<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+					  <legend>营业执照</legend>
+					</fieldset>
+					<div class="layui-form-item">
+				      <label class="layui-form-label lang" data-lang="营业执照"></label>
+				      <div class="layui-input-inline" >
+					  	<div class="layui-upload">
+				     		<button type="button" class="layui-btn layui-btn-normal lang" id="bl-upload" data-lang="上传图片"></button>
+				       		<div class="layui-upload-list">
+				      			<img class="layui-upload-img" id="bl-upload-img" style="width: 200px;" src="">
+				          		<p id="logo-upload-text"></p>
+				       		</div>
+				    	</div> 
+						<input type="text" name="businessLicense" class="layui-input" style="display: none;">
+				      </div>
+				    </div>
+				    <div class="layui-form-item">
+				      <div class="lang" data-lang="图片温馨提示" style="color: #c2c2c2;margin:10px 0;padding-left: 100px;"></div>
+				    </div>
+				    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+					  <legend>机构联系人</legend>
+					</fieldset>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="联系人"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="legalPerson" placeholder="请输入联系人" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="联系人身份证"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="legalPersonIdCard" lay-verify="identity" placeholder="请输入联系人身份证" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="联系电话"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="legalPersonPhone" lay-verify="phone" placeholder="请输入联系电话" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label"></label>
+						<div class="layui-input-inline">
+      						<button id="nextBackBtn" type="button" class="layui-btn layui-btn-primary lang" data-lang="上一步"></button>
+						 	<button id="submit" type="button" class="layui-btn layui-btn-normal lang" data-lang="提交审核" lay-submit="" lay-filter="submit"></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		  </div>
+		</div>     
+      
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="./views/src/js/organization/organization-improve.js"></script>

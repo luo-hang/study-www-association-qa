@@ -1,0 +1,203 @@
+  <style>
+  	.layui-form-item .layui-input-inline {
+	    width: 500px;
+	}
+	.layui-form-label {
+	    float: left;
+	    width: 120px;
+	}
+  </style>
+
+  <title class="lang" data-lang="问题列表"></title>
+  
+  <div class="layui-card layadmin-header">
+    <div class="layui-breadcrumb" lay-filter="breadcrumb">
+      <a lay-href="" class="lang" data-lang="主页"></a>
+      <a><cite class="lang" data-lang="机构设置"></cite></a>
+      <a><cite class="lang" data-lang="初次审核"></cite></a>
+    </div>
+  </div>
+
+  <div class="layui-fluid">
+    <div class="layui-card">
+      <div class="layui-card-body">
+      	<div class="layui-tab layui-tab-brief" lay-filter="organization-tab-brief-filter">
+		  <ul class="layui-tab-title">
+		    <li lay-id="1" class="layui-this lang" data-lang="企业信息"></li>
+		    <li lay-id="2" class="lang" data-lang="提交资质"></li>
+		  </ul>
+		  <div class="layui-tab-content">
+		  	<div class="layui-tab-item layui-show">
+		  		<form class="layui-form" lay-filter="layuiadmin-organization-base-form" id="layuiadmin-organization-base-form" style="padding: 20px 30px 0 0;">
+					<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+					  <legend>机构基本信息</legend>
+					</fieldset>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="机构名称"><span class="red-star">*</span></label>
+						<div class="layui-input-inline">
+							<input type="text" name="orgName" disabled="disabled" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="创建时间"></label>
+						<div class="layui-input-inline">
+							 <input type="text" name="foundDate" id="foundDate" disabled="disabled" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="机构简介"></label>
+						<div class="layui-input-inline">
+          					<textarea type="text" name="orgIntroduction" disabled="disabled" class="layui-textarea"></textarea>
+						</div>
+					</div>
+					<div class="layui-form-item">
+				      <label class="layui-form-label lang" data-lang="机构LOGO"></label>
+				      <div class="layui-input-inline" >
+					  	<div class="layui-upload">
+				       		<div class="layui-upload-list">
+				      			<img class="layui-upload-img" id="logo-upload-img" style="width: 200px;" src="">
+				          		<p id="logo-upload-text"></p>
+				       		</div>
+				    	</div> 
+						<input type="text" name="orgLogo" class="layui-input" style="display: none;">
+				      </div>
+				    </div>
+				    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+					  <legend>机构联系方式</legend>
+					</fieldset>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="详细地址"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="address" disabled="disabled" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="咨询电话"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="consultationPhone" disabled="disabled" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="机构网址"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="website" disabled="disabled" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="客服QQ"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="qq" disabled="disabled" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="客服微信"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="wechat" disabled="disabled" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+				      <label class="layui-form-label lang" data-lang="微信二维码"></label>
+				      <div class="layui-input-inline" >
+					  	<div class="layui-upload">
+				       		<div class="layui-upload-list">
+				      			<img class="layui-upload-img" id="wechat-upload-img" style="width: 200px;" src="">
+				          		<p id="wechat-upload-text"></p>
+				       		</div>
+				    	</div> 
+						<input type="text" name="wechatQrCode" class="layui-input" style="display: none;">
+				      </div>
+				    </div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="微信公众号"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="wechatMp" disabled="disabled" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+				      <label class="layui-form-label lang" data-lang="公众号二维码"></label>
+				      <div class="layui-input-inline" >
+					  	<div class="layui-upload">
+				       		<div class="layui-upload-list">
+				      			<img class="layui-upload-img" id="mp-upload-img" style="width: 200px;" src="">
+				          		<p id="logo-upload-text"></p>
+				       		</div>
+				    	</div> 
+						<input type="text" name="wechatMpQrCode" class="layui-input" style="display: none;">
+				      </div>
+				    </div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="官方微博"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="weibo" disabled="disabled" class="layui-input">
+						</div>
+					</div>
+      				<input type="hidden" name="orgid" >
+				</form>
+			</div>
+   	 		<div class="layui-tab-item">
+   	 			<form class="layui-form" lay-filter="layuiadmin-organization—detail-form" id="layuiadmin-organization—detail-form" style="padding: 20px 30px 0 0;">
+					<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+					  <legend>营业执照</legend>
+					</fieldset>
+					<div class="layui-form-item">
+				      <label class="layui-form-label lang" data-lang="营业执照"></label>
+				      <div class="layui-input-inline" >
+					  	<div class="layui-upload">
+				       		<div class="layui-upload-list">
+				      			<img class="layui-upload-img" id="bl-upload-img" style="width: 200px;" src="">
+				          		<p id="logo-upload-text"></p>
+				       		</div>
+				    	</div> 
+						<input type="text" name="businessLicense" class="layui-input" style="display: none;">
+				      </div>
+				    </div>
+				    <div class="layui-form-item">
+				      <div class="lang" data-lang="图片温馨提示" style="color: #c2c2c2;margin:10px 0;padding-left: 100px;"></div>
+				    </div>
+				    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+					  <legend>机构联系人</legend>
+					</fieldset>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="联系人"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="legalPerson" disabled="disabled" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="联系人身份证"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="legalPersonIdCard" disabled="disabled" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label lang" data-lang="联系电话"></label>
+						<div class="layui-input-inline">
+							<input type="text" name="legalPersonPhone" disabled="disabled" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<hr class="layui-bg-gray">
+						<label class="layui-form-label"></label>
+						<div class="layui-input-inline">
+      						<button id="nopass" type="button" class="layui-btn layui-btn-primary lang" data-lang="不通过" style="display: none;"></button>
+						 	<button id="submit" type="button" class="layui-btn layui-btn-normal lang" data-lang="通过" style="display: none;"></button>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label"></label>
+						<div class="layui-input-block" id="note">
+						</div>
+					</div>
+				</form>
+				
+				
+			</div>
+		  </div>
+		</div>     
+      
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="./views/src/js/organization/organization-verify.js"></script>

@@ -1,0 +1,112 @@
+<style>
+.layui-form-label {
+	float: left;
+	width: 120px;
+}
+.layui-input-block {
+    margin-left: 150px;
+}
+hr {
+    margin: 5px 0;
+}
+.content{
+	padding: 9px 15px 0px 15px;
+	font-weight: 400;
+	line-height: 20px;
+}
+.content a{
+	float: right;
+	cursor:pointer;
+	color: #1E9FFF;
+}
+.content p{
+	float: left;
+	width: 90%;
+}
+.content .layui-input{
+	float: left;
+	width: 90%;
+	display: none;
+}
+</style>
+
+<title class="lang" data-lang="企业信息"></title>
+
+<div class="layui-card layadmin-header">
+	<div class="layui-breadcrumb" lay-filter="breadcrumb">
+		<a lay-href="" class="lang" data-lang="主页"></a>
+		<a><cite class="lang" data-lang="机构设置"></cite></a> 
+		<a><cite class="lang" data-lang="入驻资质"></cite></a>
+	</div>
+</div>
+
+<div class="layui-fluid">
+	<div class="layui-card">
+		<div class="layui-card-body">
+			<form class="layui-form" lay-filter="layuiadmin-organization-base-form" id="layuiadmin-organization-base-form" style="padding: 20px 30px 0 0;">
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="营业执照"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<img id="bl-upload-img-1" class="layui-upload-img" style="width: 200px;" src="">
+							<div class="layui-upload" style="display: none;">
+					     		<button type="button" class="layui-btn layui-btn-normal lang" id="bl-upload" data-lang="上传图片"></button>
+					       		<div class="layui-upload-list">
+					      			<img class="layui-upload-img" id="bl-upload-img" style="width: 200px;" src="">
+					          		<p id="logo-upload-text"></p>
+					       		</div>
+					       		<div class="layui-form-item">
+							      <div class="lang" data-lang="图片温馨提示" style="color: #c2c2c2;margin:10px 0;padding-left: 100px;"></div>
+							    </div>
+								<input type="text" name="businessLicense" class="layui-input" style="display: none;">
+					    	</div> 
+							<a class="lang updateImg" data-lang="修改" data-name="businessLicense"></a>
+							<a class="lang completeImg" data-lang="完成" data-name="businessLicense" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="联系人"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<p id="legalPerson"></p>
+							<input type="text" name="legalPerson" autocomplete="off" class="layui-input">
+							<a class="lang update" data-lang="修改" data-name="legalPerson" ></a>
+							<a class="lang complete" data-lang="完成" data-name="legalPerson" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="联系人身份证"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<p id="legalPersonIdCard"></p>
+							<input type="text" name="legalPersonIdCard" autocomplete="off" class="layui-input">
+							<a class="lang update" data-lang="修改" data-name="legalPersonIdCard" ></a>
+							<a class="lang complete" data-lang="完成" data-name="legalPersonIdCard" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="联系电话"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<p id="legalPersonPhone"></p>
+							<input type="text" name="legalPersonPhone" autocomplete="off" class="layui-input">
+							<a class="lang update" data-lang="修改" data-name="legalPersonPhone" ></a>
+							<a class="lang complete" data-lang="完成" data-name="legalPersonPhone" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<input type="hidden" id="orgid" name="orgid">
+			</form>
+
+		</div>
+	</div>
+</div>
+
+<script src="./views/src/js/organization/organization-qualification.js"></script>

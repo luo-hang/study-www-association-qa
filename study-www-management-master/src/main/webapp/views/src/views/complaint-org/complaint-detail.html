@@ -1,0 +1,205 @@
+<style>
+.layui-form-label {
+	float: left;
+	width: 120px;
+}
+.layui-input-block {
+    margin-left: 150px;
+}
+.status{
+	display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: #009688;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+}
+</style>
+
+		<div class="layui-card-body">
+			<form class="layui-form" style="padding: 20px 30px 0 0;">
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="投诉状态"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<script type="text/html" template>
+								{{#  if(d.params.status == 0){ }}
+ 									<div class="status" style="background-color: #1E9FFF">{{ shiant.l("审核中") }}</div>
+								{{#  }  }}
+								{{#  if(d.params.status == 1){ }}
+ 									<div class="status">{{ shiant.l("已受理") }}</div>
+								{{#  }  }}
+								{{#  if(d.params.status == -1){ }}
+ 									<div class="status" style="background-color: #c2c2c2">{{ shiant.l("无效") }}</div>
+								{{#  }  }}
+    						</script>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="投诉机构"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<script type="text/html" template>
+								<p>{{ d.params.orgName || '' }}</p>
+    						</script>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="投诉标题"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<script type="text/html" template>
+								<p>{{ d.params.title || '' }}</p>
+    						</script>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="维权类型"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<script type="text/html" template>
+								{{#  layui.each(d.params.type.split(";"), function(index, item){ }}
+									{{#  if(item != null&&item != ""){ }}
+										<span class="layui-badge-rim">{{ item }}</span>
+									{{#  }  }}
+								{{#  }); }}
+    						</script>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="维权诉求"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<script type="text/html" template>
+								{{#  layui.each(d.params.need.split(";"), function(index, item){ }}
+									{{#  if(item != null&&item != ""){ }}
+										<span class="layui-badge-rim">{{ item }}</span>
+									{{#  }  }}
+								{{#  }); }}
+    						</script>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="投诉详细"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<script type="text/html" template>
+								<p>{{ d.params.content || '' }}</p>
+								<div class="layui-row">
+									{{#  if(d.params.imageFile1 != null&&d.params.imageFile1 != ""){ }}
+										<div class="layui-col-xs2">
+											<img class="layui-upload-img photo" style="width: 100%;" src="{{ d.params.imageFile1 || '' }}">
+										</div>
+									{{#  }  }}
+									{{#  if(d.params.imageFile2 != null&&d.params.imageFile2 != ""){ }}
+										<div class="layui-col-xs2">
+											<img class="layui-upload-img photo" style="width: 100%;" src="{{ d.params.imageFile2 || '' }}">
+										</div>
+									{{#  }  }}
+									{{#  if(d.params.imageFile3 != null&&d.params.imageFile3 != ""){ }}
+										<div class="layui-col-xs2">
+											<img class="layui-upload-img photo" style="width: 100%;" src="{{ d.params.imageFile3 || '' }}">
+										</div>
+									{{#  }  }}
+									{{#  if(d.params.imageFile4 != null&&d.params.imageFile4 != ""){ }}
+										<div class="layui-col-xs2">
+											<img class="layui-upload-img photo" style="width: 100%;" src="{{ d.params.imageFile4 || '' }}">
+										</div>
+									{{#  }  }}
+									{{#  if(d.params.imageFile5 != null&&d.params.imageFile5 != ""){ }}
+										<div class="layui-col-xs2">
+											<img class="layui-upload-img photo" style="width: 100%;" src="{{ d.params.imageFile5 || '' }}">
+										</div>
+									{{#  }  }}
+									{{#  if(d.params.imageFile6 != null&&d.params.imageFile6 != ""){ }}
+										<div class="layui-col-xs2">
+											<img class="layui-upload-img photo" style="width: 100%;" src="{{ d.params.imageFile6 || '' }}">
+										</div>
+									{{#  }  }}
+									{{#  if(d.params.imageFile7 != null&&d.params.imageFile7 != ""){ }}
+										<div class="layui-col-xs2">
+											<img class="layui-upload-img photo" style="width: 100%;" src="{{ d.params.imageFile7 || '' }}">
+										</div>
+									{{#  }  }}
+									{{#  if(d.params.imageFile8 != null&&d.params.imageFile8 != ""){ }}
+										<div class="layui-col-xs2">
+											<img class="layui-upload-img photo" style="width: 100%;" src="{{ d.params.imageFile8 || '' }}">
+										</div>
+									{{#  }  }}
+									{{#  if(d.params.imageFile9 != null&&d.params.imageFile9 != ""){ }}
+										<div class="layui-col-xs2">
+											<img class="layui-upload-img photo" style="width: 100%;" src="{{ d.params.imageFile9 || '' }}">
+										</div>
+									{{#  }  }}
+									{{#  if(d.params.imageFile10 != null&&d.params.imageFile10 != ""){ }}
+										<div class="layui-col-xs2">
+											<img class="layui-upload-img photo" style="width: 100%;" src="{{ d.params.imageFile10 || '' }}">
+										</div>
+									{{#  }  }}
+									<hr style="background-color: #fff;">
+									{{#  if(d.params.videoFile1 != null&&d.params.videoFile1 != ""){ }}
+										<div class="layui-col-xs4">
+											<video controls="controls" src="{{ d.params.videoFile1 || '' }}" style="width:100%"></video>
+										</div>
+									{{#  }  }}
+									{{#  if(d.params.videoFile2 != null&&d.params.videoFile2 != ""){ }}
+										<div class="layui-col-xs4">
+											<video controls="controls" src="{{ d.params.videoFile2 || '' }}" style="width:100%"></video>
+										</div>
+									{{#  }  }}
+									{{#  if(d.params.videoFile3 != null&&d.params.videoFile3 != ""){ }}
+										<div class="layui-col-xs4">
+											<video controls="controls" src="{{ d.params.videoFile3 || '' }}" style="width:100%"></video>
+										</div>
+									{{#  }  }}
+								</div>
+    						</script>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<script type="text/html" template>
+				{{#  if(d.params.status == -1){ }}
+				<div class="layui-form-item">
+					<hr class="layui-bg-gray">
+					<label class="layui-form-label lang" data-lang="无效原因"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<p>{{ d.params.reason || '' }}</p>
+						</div>
+					</div>
+				</div>
+				{{#  }  }}
+			    </script>
+			</form>
+
+		</div>
+<script>
+layui.use([ 'admin', 'upload', 'form'], function() {
+	$('.photo').on('click', function () {
+		layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            shadeClose: true,
+            area: ['80%', '80%'], //宽高
+            content: "<img src=" + this.src + " />"
+        });
+	})
+});
+</script>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/shiant-common-rmi.iml" filepath="$PROJECT_DIR$/shiant-common-rmi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../shiant-service-user-master/shiant-service-user.iml" filepath="$PROJECT_DIR$/../shiant-service-user-master/shiant-service-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../study-www-management-master/study-www-management.iml" filepath="$PROJECT_DIR$/../study-www-management-master/study-www-management.iml" />
+    </modules>
+  </component>
+</project>

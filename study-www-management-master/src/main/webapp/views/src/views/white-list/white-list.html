@@ -1,0 +1,114 @@
+<style>
+.layui-card-header {
+    height: auto;
+    font-size: 14px;
+    line-height: 38px;
+}
+.wl .title {
+    font-size: 18px;
+    line-height: 50px;
+}
+.wl a {
+	margin: 0 10px;
+	cursor: pointer;
+	color: #1e9fff;
+}
+.wl .col{
+ 	line-height: 50px;
+	border-bottom:1px solid #eee
+}
+.wl .grey{
+	background-color: #eee;
+}
+</style>
+
+<title class="lang" data-lang="企业信息"></title>
+
+<div class="layui-card layadmin-header">
+	<div class="layui-breadcrumb" lay-filter="breadcrumb">
+		<a lay-href="" class="lang" data-lang="主页"></a>
+		<a><cite class="lang" data-lang="白名单认证"></cite></a> 
+		<a><cite class="lang" data-lang="条目认证"></cite></a>
+	</div>
+</div>
+
+<div class="layui-fluid">
+	<div class="layui-card">
+		<div class="layui-card-header">
+			<label class="lang" data-lang="白名单说明"></label>
+		</div>
+		<div class="layui-card-body">
+			<div class="lang" data-lang="白名单温馨提示"></div>
+			<div class="wl layui-row">
+				<div class="layui-col-xs12 col" id="commitment">
+					<div class="layui-col-xs6 title lang" data-lang="承诺书"></div>
+					<div class="layui-col-xs3 title"></div>
+					<div class="layui-col-xs3 title">
+						<a class="lang" data-lang="查看扫描" onclick="showFile('commitment')" style="display: none;"></a>
+					 	<a id="commitment-upload" class="lang" data-lang="上传扫描" style="display: none;"></a>
+					 	<a class="lang" data-lang="下载模板" onclick="downloadFile('commitment')" style="display: none;"></a>
+					</div>
+				</div>
+				<div class="layui-col-xs12 col grey" id="apply">
+					<div class="layui-col-xs6 title lang" data-lang="申请表"></div>
+					<div class="layui-col-xs3 title"></div>
+					<div class="layui-col-xs3 title">
+						<a class="lang" data-lang="查看扫描" onclick="showFile('apply')" style="display: none;"></a>
+					 	<a id="apply-upload" class="lang" data-lang="上传扫描" style="display: none;"></a>
+					 	<a class="lang" data-lang="下载模板" onclick="downloadFile('apply')" style="display: none;"></a>
+					</div>
+				</div>
+				<div class="layui-col-xs12 col" id="information">
+					<div class="layui-col-xs6 title lang" data-lang="信息表"></div>
+					<div class="layui-col-xs3 title"></div>
+					<div class="layui-col-xs3 title">
+						<a class="lang" data-lang="查看扫描" onclick="showFile('information')" style="display: none;"></a>
+					 	<a id="information-upload" class="lang" data-lang="上传扫描" style="display: none;"></a>
+					 	<a class="lang" data-lang="下载模板" onclick="downloadFile('information')" style="display: none;"></a>
+					</div>
+				</div>
+				<div class="layui-col-xs12 col grey" id="copy">
+					<div class="layui-col-xs6 title lang" data-lang="复印件"></div>
+					<div class="layui-col-xs3 title"></div>
+					<div class="layui-col-xs3 title">
+						<a class="lang" data-lang="查看扫描" onclick="showFile('copy')" style="display: none;"></a>
+					 	<a id="copy-upload" class="lang" data-lang="上传扫描" style="display: none;"></a>
+					 	<a class="lang" data-lang="下载模板" onclick="downloadFile('copy')" style="display: none;"></a>
+					</div>
+				</div>
+				<div class="layui-col-xs12 col" id="convention">
+					<div class="layui-col-xs6 title lang" data-lang="公约"></div>
+					<div class="layui-col-xs3 title"></div>
+					<div class="layui-col-xs3 title">
+						<a class="lang" data-lang="查看扫描" onclick="showFile('convention')" style="display: none;"></a>
+					 	<a id="convention-upload" class="lang" data-lang="上传扫描" style="display: none;"></a>
+					 	<a class="lang" data-lang="下载模板" onclick="downloadFile('convention')" style="display: none;"></a>
+					</div>
+				</div>
+				<div class="layui-col-xs12 col grey" id="verification">
+					<div class="layui-col-xs6 title lang" data-lang="认定书"></div>
+					<div class="layui-col-xs3 title"></div>
+					<div class="layui-col-xs3 title">
+						<a class="lang" data-lang="查看扫描" onclick="showFile('verification')" style="display: none;"></a>
+					 	<a id="verification-upload" class="lang" data-lang="上传扫描" style="display: none;"></a>
+					 	<a class="lang" data-lang="下载模板" onclick="downloadFile('verification')" style="display: none;"></a>
+					</div>
+				</div>
+			</div>
+			<div id="status" class="layui-row" style="display: none;">
+				<div align="center" class="layui-col-xs12 lang" style="margin: 50px 0 10px 0;font-size: 16px;" data-lang="白名单通过"></div>
+				<div style="line-height: 60px;">
+					<div class="layui-col-xs6" align="right" style="line-height: 60px;">
+						<i class="layui-icon layui-icon-auz"  style="font-size: 60px; color: #5FB878;margin-right: 10px;"></i>
+					</div>
+					<div class="layui-col-xs6" style="line-height: 60px;">
+						<div style="line-height: 30px;"><span class="lang" data-lang="资质号"></span><span id="wlNo"></span></div>
+						<div style="line-height: 30px;"><span class="lang" data-lang="资质有效期"></span><span id="validDate"></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="./views/src/js/white-list/white-list.js"></script>

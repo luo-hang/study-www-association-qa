@@ -78,3 +78,58 @@ CREATE TABLE `t_sys_professional` (
 INSERT INTO `t_sys_professional` VALUES ('1','生物化学与分子生物学','生物科学学院','工程硕士','是','6','99999');
 INSERT INTO `t_sys_professional` VALUES ('2','计算机应用','计算机科学与技术学院','工程硕士','是','6','99999');
 INSERT INTO `t_sys_professional` VALUES ('3','生物制药','药理学院','工程硕士','是','6','99999');
+
+
+-- ----------------------------
+-- Table structure for t_sys_organization
+-- ----------------------------
+
+DROP TABLE IF EXISTS `t_sys_organization`;
+CREATE TABLE `t_sys_organization` (
+  `or_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '机构编号',
+  `or_name` varchar(20) NOT NULL COMMENT '机构名称',
+  `or_Creation_date` varchar(20) NOT NULL COMMENT '创建时间',
+  `or_intro` varchar(50) DEFAULT NULL COMMENT '机构简介',
+  `or_logo` varchar(30) DEFAULT NULL COMMENT '机构logo',
+  `or_country` varchar(30) DEFAULT NULL COMMENT '主攻留学国家',
+  `or_services` varchar(30) DEFAULT NULL COMMENT '服务领域',
+  `or_address` varchar(30) DEFAULT NULL COMMENT '详细地址',
+  `or_hotline` bigint(20) DEFAULT NULL COMMENT '咨询电话',
+  `or_url` varchar(20) DEFAULT NULL COMMENT '机构网址',
+  `or_qq` bigint(20) DEFAULT NULL COMMENT '客服QQ',
+  `or_wechat` varchar(20) DEFAULT NULL COMMENT '客服微信',
+  `or_wechat_line` varchar(20) DEFAULT NULL COMMENT '微信公众号',
+  `or_microblog` varchar(20) DEFAULT NULL COMMENT '官方微博',
+  PRIMARY KEY (`or_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_sys_organization
+-- ----------------------------
+INSERT INTO `t_sys_organization` VALUES ('1','高科','1999年1月1日','这是一个好机构','','美国','留学金融','三桥','138','www.baidu.com','516','l516','高科公众号','高科微博');
+INSERT INTO `t_sys_organization` VALUES ('2','中科','1999年1月1日','这是一个好机构','','美国','留学金融','三桥','138','www.baidu.com','516','l516','高科公众号','高科微博');
+INSERT INTO `t_sys_organization` VALUES ('3','低科','1999年1月1日','这是一个好机构','','美国','留学金融','三桥','138','www.baidu.com','516','l516','高科公众号','高科微博');
+
+
+-- ----------------------------
+-- Table structure for t_sys_certification
+-- ----------------------------
+
+DROP TABLE IF EXISTS `t_sys_certification`;
+CREATE TABLE `t_sys_certification` (
+  `ce_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '入驻资质编号',
+  `ce_license` varchar(40) DEFAULT NULL COMMENT '营业执照',
+  `ce_name` varchar(20) NOT NULL COMMENT '机构联系人',
+  `ce_id_number` bigint(20) NOT NULL COMMENT '身份证号',
+  `ce_contact` bigint(20) NOT NULL COMMENT '联系方式',
+  PRIMARY KEY (`ce_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_sys_certification
+-- ----------------------------
+
+INSERT INTO `t_sys_certification` VALUES ('1','','马迈','513646','138');
+INSERT INTO `t_sys_certification` VALUES ('2','','马迈','513646','138');
+INSERT INTO `t_sys_certification` VALUES ('3','','马迈','513646','138');
+

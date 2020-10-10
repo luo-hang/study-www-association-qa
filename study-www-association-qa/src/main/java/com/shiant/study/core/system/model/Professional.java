@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "t_sys_professional_copy1")
+@Table(name = "t_sys_professional")
 public class Professional extends BaseEntity implements Serializable  {
 
     private static final long serialVersionUID = 536434544756673939L;
@@ -38,9 +38,6 @@ public class Professional extends BaseEntity implements Serializable  {
 
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
 
     public Long getProId() {
         return proId;

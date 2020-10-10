@@ -1,0 +1,231 @@
+<style>
+.layui-form-label {
+	float: left;
+	width: 120px;
+}
+.layui-input-block {
+    margin-left: 150px;
+}
+hr {
+    margin: 5px 0;
+}
+.content{
+	padding: 9px 15px 0px 15px;
+	font-weight: 400;
+	line-height: 20px;
+}
+.content a{
+	float: right;
+	cursor:pointer;
+	color: #1E9FFF;
+}
+.content p{
+	float: left;
+	width: 90%;
+}
+.content .layui-input{
+	float: left;
+	width: 90%;
+	display: none;
+}
+</style>
+
+<title class="lang" data-lang="企业信息"></title>
+
+<div class="layui-card layadmin-header">
+	<div class="layui-breadcrumb" lay-filter="breadcrumb">
+		<a lay-href="" class="lang" data-lang="主页"></a>
+		<a><cite class="lang" data-lang="机构设置"></cite></a> 
+		<a><cite class="lang" data-lang="企业信息"></cite></a>
+	</div>
+</div>
+
+<div class="layui-fluid">
+	<div class="layui-card">
+		<div class="layui-card-body">
+			<form class="layui-form" lay-filter="layuiadmin-organization-base-form" id="layuiadmin-organization-base-form" style="padding: 20px 30px 0 0;">
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="机构名称"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<p id="orgName"></p>
+							<input type="text" name="orgName" autocomplete="off" class="layui-input">
+							<a class="lang update" data-lang="修改" data-name="orgName" ></a>
+							<a class="lang complete" data-lang="完成" data-name="orgName" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="创建时间"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<p id="foundDate"></p>
+							<input type="text" name="foundDate" id="_foundDate_" autocomplete="off" class="layui-input">
+							<a class="lang update" data-lang="修改" data-name="foundDate" ></a>
+							<a class="lang complete" data-lang="完成" data-name="foundDate" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="机构简介"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<p id="orgIntroduction"></p>
+							<textarea name="orgIntroduction" autocomplete="off" class="layui-textarea" style="display: none;"></textarea>
+							<a class="lang update" data-lang="修改" data-name="orgIntroduction" ></a>
+							<a class="lang complete" data-lang="完成" data-name="orgIntroduction" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="机构LOGO"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<img id="logo-upload-img-1" class="layui-upload-img" style="width: 200px;" src="">
+							<div class="layui-upload" style="display: none;">
+					     		<button type="button" class="layui-btn layui-btn-normal lang" id="logo-upload" data-lang="上传图片"></button>
+					       		<div class="layui-upload-list">
+					      			<img class="layui-upload-img" id="logo-upload-img" style="width: 200px;" src="">
+					          		<p id="logo-upload-text"></p>
+					       		</div>
+								<input type="text" name="orgLogo" class="layui-input" style="display: none;">
+					    	</div> 
+							<a class="lang updateImg" data-lang="修改" data-name="orgLogo"></a>
+							<a class="lang completeImg" data-lang="完成" data-name="orgLogo" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="详细地址"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<p id="address"></p>
+							<input type="text" name="address" autocomplete="off" class="layui-input">
+							<a class="lang update" data-lang="修改" data-name="address" ></a>
+							<a class="lang complete" data-lang="完成" data-name="address" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="咨询电话"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<p id="consultationPhone"></p>
+							<input type="text" name="consultationPhone" autocomplete="off" class="layui-input">
+							<a class="lang update" data-lang="修改" data-name="consultationPhone" ></a>
+							<a class="lang complete" data-lang="完成" data-name="consultationPhone" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="机构网址"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<p id="website"></p>
+							<input type="text" name="website" autocomplete="off" class="layui-input">
+							<a class="lang update" data-lang="修改" data-name="website" ></a>
+							<a class="lang complete" data-lang="完成" data-name="website" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="客服QQ"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<p id="qq"></p>
+							<input type="text" name="qq" autocomplete="off" class="layui-input">
+							<a class="lang update" data-lang="修改" data-name="qq" ></a>
+							<a class="lang complete" data-lang="完成" data-name="qq" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="客服微信"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<p id="wechat"></p>
+							<input type="text" name="wechat" autocomplete="off" class="layui-input">
+							<a class="lang update" data-lang="修改" data-name="wechat" ></a>
+							<a class="lang complete" data-lang="完成" data-name="wechat" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="微信二维码"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<img id="wechat-upload-img-1" class="layui-upload-img" style="width: 200px;" src="">
+							<div class="layui-upload" style="display: none;">
+					     		<button type="button" class="layui-btn layui-btn-normal lang" id="wechat-upload" data-lang="上传图片"></button>
+					       		<div class="layui-upload-list">
+					      			<img class="layui-upload-img" id="wechat-upload-img" style="width: 200px;" src="">
+					          		<p id="wechat-upload-text"></p>
+					       		</div>
+								<input type="text" name="wechatQrCode" class="layui-input" style="display: none;">
+					    	</div> 
+							<a class="lang updateImg" data-lang="修改" data-name="wechatQrCode"></a>
+							<a class="lang complete" data-lang="完成" data-name="wechatQrCode" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="微信公众号"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<p id="wechatMp"></p>
+							<input type="text" name="wechatMp" autocomplete="off" class="layui-input">
+							<a class="lang update" data-lang="修改" data-name="wechatMp" ></a>
+							<a class="lang complete" data-lang="完成" data-name="wechatMp" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="公众号二维码"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<img class="layui-upload-img" id="mp-upload-img-1" style="width: 200px;" src="">
+							<div class="layui-upload" style="display: none;">
+					     		<button type="button" class="layui-btn layui-btn-normal lang" id="mp-upload" data-lang="上传图片"></button>
+					       		<div class="layui-upload-list">
+					      			<img class="layui-upload-img" id="mp-upload-img" style="width: 200px;" src="">
+					          		<p id="logo-upload-text"></p>
+					       		</div>
+					       		<input type="text" name="wechatMpQrCode" class="layui-input" style="display: none;">
+					    	</div> 
+							<a class="lang updateImg" data-lang="修改" data-name="wechatMpQrCode"></a>
+							<a class="lang complete" data-lang="完成" data-name="wechatMpQrCode" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label lang" data-lang="官方微博"></label>
+					<div class="layui-input-block">
+						<div class="content">
+							<p id="weibo"></p>
+							<input type="text" name="weibo" autocomplete="off" class="layui-input">
+							<a class="lang update" data-lang="修改" data-name="weibo" ></a>
+							<a class="lang complete" data-lang="完成" data-name="weibo" style="display: none;"></a>
+						</div>
+						<hr>
+					</div>
+				</div>
+				<input type="hidden" id="orgid" name="orgid">
+			</form>
+
+		</div>
+	</div>
+</div>
+
+<script src="./views/src/js/organization/organization-detail.js"></script>

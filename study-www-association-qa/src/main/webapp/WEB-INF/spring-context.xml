@@ -95,4 +95,5 @@
         factory-bean="memcachedClientBuilder"  
         factory-method="build"  
         destroy-method="shutdown" /> -->
+<!--    <import resource="rest-servlet.xml"/>-->
 </beans>

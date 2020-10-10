@@ -3,6 +3,7 @@ E:\demo\study-www-association-qa\src\main\java\com\shiant\study\web\util\SSOUtil
 E:\demo\study-www-association-qa\src\main\java\com\shiant\study\core\system\transfer\CarouselTransfer.java
 E:\demo\study-www-association-qa\src\main\java\com\shiant\study\web\SwaggerConfig.java
 E:\demo\study-www-association-qa\src\main\java\com\shiant\study\core\system\service\impl\CarouselServiceImpl.java
+E:\demo\study-www-association-qa\src\main\java\com\shiant\study\core\system\vo\UniversVo.java
 E:\demo\study-www-association-qa\src\main\java\com\shiant\study\core\system\dao\CarouselRepository.java
 E:\demo\study-www-association-qa\src\main\java\com\shiant\study\web\controller\CarouselRESTService.java
 E:\demo\study-www-association-qa\src\main\java\com\shiant\study\common\util\JpaUtils.java

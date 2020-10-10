@@ -8,6 +8,7 @@ com\shiant\study\core\system\service\CarouselService.class
 com\shiant\study\core\system\transfer\CarouselTransfer.class
 com\shiant\study\web\util\SSOUtils.class
 com\shiant\study\core\system\dao\CarouselRepository.class
+com\shiant\study\core\system\vo\UniversVo.class
 com\shiant\study\core\system\model\Carousel.class
 com\shiant\study\core\system\dao\impl\CarouselDAOImpl.class
 com\shiant\study\web\controller\CarouselRESTService.class

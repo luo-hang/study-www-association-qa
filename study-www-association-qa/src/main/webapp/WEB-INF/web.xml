@@ -71,7 +71,13 @@
     	<servlet-name>DruidStatView</servlet-name>  
    	 	<url-pattern>/druid/*</url-pattern>  
 	</servlet-mapping>
-	
+
+
+
+
+
+
+<!--	 屏蔽开始    -->
 	<listener>
 	    <listener-class>com.biot.fsnip.sso.client.SSOListener</listener-class>
 	</listener>
@@ -127,6 +133,11 @@
 	    <filter-name>SSO HttpServletRequest Wrapper Filter</filter-name>
 	    <url-pattern>/*</url-pattern>
 	</filter-mapping>
+
+
+
+
+<!--  屏蔽结束	-->
 	<filter>
 	    <filter-name>Authorization Filter</filter-name>
 	    <filter-class>com.biot.fsnip.sso.client.AuthorizationFilter</filter-class>

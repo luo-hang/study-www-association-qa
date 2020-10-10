@@ -1,0 +1,464 @@
+.main-top{
+  width: 100%;
+  height: 216px;
+  background-image: url(../img/bannerlmg.png);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.membership_img {
+	width: 40px;
+	height: 40px;
+	left:0;
+	top:150px;
+	position: fixed;
+	z-index: 1000;
+	background: url(../img/Navigation.png) no-repeat center center;
+} 
+.membership_img:hover .member_services {
+	display: block;
+}
+.member_services {
+	z-index: 100;
+	margin-top: 70px;
+	top: 58px;
+	left: 0;
+	display: none;
+	width: 140px;
+	height: 337px;
+	position: fixed;
+	border-radius: 0 8px 8px 0;
+	box-shadow: 1px 2px 2px #f4f4f4;
+	background: #FFFFFF;
+}
+
+.member_services h3 {
+	margin: 30px 0 35px 0;
+	text-align: center;
+	color: #39549D;
+}
+.member_services ul li a .member_lists {
+	width: 100px;
+	height: 20px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #FBFBFB;
+	padding-bottom: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+.member_services ul li a .member_lists img {
+	width: 18px;
+	height: 18px;
+	margin-right: 3px;
+}
+
+.member_btn button {
+	width: 110px;
+	height: 30px;
+	margin: 0 auto;
+	background-color: #39549D;
+	margin-bottom: 10px;
+	color: #FFFFFF;
+	border-radius: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+}
+
+.member_btn div font a {
+	color: #FFFFFF;
+}
+/* ......... */
+.main-top .left{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.main-top .left .head{
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+}
+.main-top .left div{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin-left: 10px;
+  width: 670px;
+}
+.main-top .left div p{
+  font-weight: bold;
+  font-size: 24px;
+}
+.main-top .left div span{
+  font-size: 14px;
+  line-height: 24px;
+}
+.main-top .left div i{
+  color: #0094FF;
+  line-height: 24px;
+  cursor: pointer;
+}
+.main-top .left div i img{
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.main-top a{
+  width: 160px;
+  height: 40px;
+  border: 1px solid #FFFFFF;
+  line-height: 40px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+.main-box{
+  width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-box .left{
+  width: 836px;
+}
+.main-box .right{
+  width: 344px;
+}
+.hot-case{
+  width: 312px;
+  display: block;
+  height: 65px;
+  margin: 22px auto;
+  cursor: pointer;
+}
+.hot-case p{
+  font-size: 16px;
+  color: #333333;
+}
+.hot-case .lines{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.hot-case .line{
+  font-size: 12px;
+  width: calc(100% - 5em);
+  height: 0;
+  border-bottom: 1px dashed #cccccc;
+}
+.hot-case span{
+  font-size: 12px;
+  color: #999999;
+}
+.gold-adviser{
+  width: 284px;
+  height: 78px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.gold-adviser img{
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+}
+.gold-adviser .right{
+  margin-left: 12px;
+  width: 196px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.gold-adviser .right p{
+  font-size: 18px;
+  color: #333333;
+}
+.gold-adviser .right span{
+  color: #999999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.tabs{
+  background: #F5F5F5;
+  width: 817px;
+  height: 40px;
+}
+.tabs span{
+  width: 130px;
+  height: 40px;
+  color: #333333;
+  font-size: 16px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+.tabs span.active{
+  color: #FFFFFF;
+  background-color: #38549D;
+}
+.item-title{
+  width: 817px;
+  height: 44px;
+  border-bottom: 1px solid #dddddd;
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+}
+.item-title span{
+  display: block;
+  height: 17px;
+  line-height: 17px;
+  border-left: 9px solid #38549D;
+  font-size: 18px;
+  color: #000;
+  padding-left: 6px;
+}
+.universitys{
+  margin-top: 30px;
+  width: 817px;
+  display: flex;
+  justify-content: space-between;
+}
+.university{
+  width: 197px;
+  height: 276px;
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  display: block;
+}
+.university .image-box{
+  width: 100%;
+  height: 120px;
+  position: relative;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+}
+.university .image-box .uni-img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.university .image-box .badge-img{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 11px;
+}
+.university .bottom h3{
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-weight: normal;
+}
+.university .bottom p{
+  padding-left: 30px;
+  font-size: 14px;
+  color: #666666;
+}
+.university .bottom p i{
+  font-style: normal;
+  color: red;
+}
+.loadmore{
+  border-radius: 2px;
+  background: #FFFFFF;
+  border: 1px solid #465FA3;
+  width: 817px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  color: #38549D;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+.organizations{
+  width: 817px;
+}
+.organization{
+  width: 100%;
+  height: 238px;
+  border-bottom: 1px solid #EEEEEE;
+}
+.organization .box{
+  padding-top: 35px;
+  height: 167px;
+  display: flex;
+  flex-direction: row;
+}
+.organization .box .ori-img{
+  width: 167px;
+  height: 167px;
+}
+.organization .box div{
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.organization .box h3{
+  font-size: 20px;
+  color: #000;
+  height: 24px;
+  line-height: 24px;
+  font-weight: normal;
+  margin-top: 14px;
+}
+.organization .box h3 span{
+  display: inline-block;
+  color: #fa3c00;
+  font-size: 16px;
+  margin-left: 6px;
+}
+.organization .box h3 span img{
+  margin-top: 1px;
+}
+.organization .box div p{
+  font-size: 16px;
+  color: #999;
+  height: 21px;
+  line-height: 21px;
+}
+.organization .box div p img{
+  margin-top: 3px;
+  margin-right: 5px;
+}
+.organization .box div i{
+  font-size: 16px;
+  margin-bottom: 27px;
+}
+.organization .box div i span{
+  color: #38549D;
+}
+.tab2-box{
+  width: 817px;
+}
+.tab{
+  display: none;
+} 
+.tab.tab1{
+  display: block;
+}
+.form-item{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 15px 0;
+}
+.form-list {
+  width: 100%;
+  height: 40px;
+  display: flex;
+}
+.form-list span{
+  font-size: 16px;
+  color: #666666;
+  height: 40px;
+  line-height: 40px;
+  width: 4em;
+  display: inline-block;
+}
+.form-list select{
+  width: 20%;
+  height: 40px;
+  outline: none;
+  text-align: center;
+  margin: 0 20px;
+  border: 1px solid #dddddd;
+  display: inline-block;
+  line-height: 40px;
+}
+.form-item span{
+  font-size: 16px;
+  color: #666666;
+  height: 40px;
+  line-height: 40px;
+  width: 4em;
+}
+.form-item select{
+  width: 731px;
+  height: 40px;
+  outline: none;
+  border: 1px solid #dddddd;
+  margin-left: 20px;
+}
+.form-item .right{
+  width: 733px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  flex-wrap: wrap;
+}
+.form-item .right div{
+  width: 128px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+.form-item .right div label{
+  margin-left: 5px;
+}
+.form-item .text-input{
+  width: 731px;
+  height: 40px;
+  border: 1px solid #dddddd;
+  margin-left: 20px;
+}
+.pic-up{
+  margin-left: 20px;
+  width: 731px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.pic-up img{
+  width: 80px;
+  height: 80px;
+}
+.pic-up i{
+  font-size: 14px;
+  color: #999999;
+}
+.save{
+  border-radius: 2px;
+  background: #38549D;
+  width: 260px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  display: block;
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.pass-span{
+  width: 5em !important;
+  text-align-last:justify;
+  text-align:justify;
+  text-justify:distribute-all-lines;
+}
+.form-item .text-input2{
+  width: 715px;
+  height: 40px;
+  border: 1px solid #dddddd;
+  margin-left: 20px;
+}

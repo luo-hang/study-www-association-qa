@@ -18,6 +18,7 @@ public class AuthorityInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		response.setCharacterEncoding("utf-8");
+		System.out.println("AuthorityInterceptor+++++++++++++++++++++++++++++");
 //		if(request.getSession().getAttribute("user")!=null) {
 //			System.out.println("使用拦截器true");
 //			return true;

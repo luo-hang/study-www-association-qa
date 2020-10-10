@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>全国性出国留学服务平台</title>
+		<link rel="stylesheet" type="text/css" href="./css/public.css" />
+		<link rel="stylesheet" href="./css/common.css">
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
+		<link rel="stylesheet" type="text/css" href="./css/swiper-bundle.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="top-header">
+				<div class="links">
+				  <a href="javascript:;">帮助中心</a>
+				  <a href="../org/list.html">机构中心</a>
+				  <a href="./html/user/index.html">个人中心</a>
+				  <a href="./login.html">你好，请登录</a>
+				</div>
+			  </div>
+			<div class="header">
+				<div class="logo">
+					<img src="img/logo.png">
+				</div>
+				<div class="sign" style="width: 375px;margin-left: 20px;">
+					<font>全国性出国留学服务平台</font>
+				</div>
+				<div class="nav_link">
+					<div class="link_box">
+						<p>首页</p>
+						<img src="./img/down.png" alt="">
+					</div>
+					<div class="navtitle">
+						<ul>
+							<li><a href="./index.html">首页</a></li>
+							<li><a href="">关于我们</a></li>
+							<li><a href="./html/news/newslist.html">政策法规</a></li>
+							<li><a href="./html/news/newsdetail.html">行业动态</a></li>
+							<li><a href="./html/school/index.html">国外院校</a></li>
+							<li><a href="./html/org/list.html">留学机构</a></li>
+							<li><a href="">会员服务</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="complain">
+					<div class="complain_text">
+						<font>投诉电话</font>
+					</div>
+					<div class="complain_tel">
+						<div class="complain_telimg">
+							<img src="img/complain.png">
+						</div>
+						<div class="complain_teltext">
+							<font>400-080-3132</font>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="banner">
+				<div class="banner_img">
+					<img src="img/banner_img1.png">
+					<div class="banner_explain">
+						<div class="explain_top">
+							<font>依据留学行业标准</font>
+						</div>
+						<div class="explain_middle">
+							<font>打造留学服务质量保障和信用服务</font>
+						</div>
+					</div>
+				</div>
+				<div class="banner_cover">
+					<div class="cover_content">
+						<a href="javascript:;">
+							<div class="cover_contenttop">
+								<font>留学服务白名单</font>
+							</div>
+							<div class="cover_contentbottom">
+								<img src="img/service_abroad.png">
+							</div>
+						</a>
+					</div>
+					<div class="cover_content">
+						<a href="javascript:;">
+							<div class="cover_contenttop">
+								<font>行业消费维权</font>
+							</div>
+							<div class="cover_contentbottom">
+								<img src="img/protection_consumers.png">
+							</div>
+						</a>
+					</div>
+					<div class="cover_content">
+						<a href="javascript:;">
+							<div class="cover_contenttop">
+								<font>从业提升培训</font>
+							</div>
+							<div class="cover_contentbottom">
+								<img src="img/increase_training.png">
+							</div>
+						</a>
+					</div>
+					<div class="cover_content">
+						<a href="javascript:;">
+							<div class="cover_contenttop">
+								<font>出国留学指南</font>
+							</div>
+							<div class="cover_contentbottom">
+								<img src="img/study_guide.png">
+							</div>
+						</a>
+					</div>
+					<div class="cover_content">
+						<a href="javascript:;">
+							<div class="cover_contenttop">
+								<font>出国能力培训</font>
+							</div>
+							<div class="cover_contentbottom">
+								<img src="img/ability_training.png">
+							</div>
+						</a>
+					</div>
+					<div class="cover_content">
+						<a href="javascript:;">
+							<div class="cover_contenttop">
+								<font>行业标准</font>
+							</div>
+							<div class="cover_contentbottom">
+								<img src="img/industrial_standard.png">
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- 留学链服务 -->
+			<main class="main_box">
+				<div class="main_title">
+					<h1>留学链全服务，帮你逐一攻克申请流程关键点</h1>
+					<p>One stop service</p>
+				</div>
+				<!-- 留学内容 -->
+				<div class="overseas_study_title">
+					<div class="study_abroad_before">
+						<div class="title">
+							<h2>留学前</h2>
+						</div>
+						<div class="content">
+							<div class="before_contents" onclick="selectAbility(1)">
+								<h4>留学咨询及办理</h4>
+							</div>
+							<div class="before_contents" onclick="selectAbility(2)">
+								<h4>背景提升</h4>
+							</div>
+							<div class="before_contents" onclick="selectAbility(3)">
+								<h4>艺术留学</h4>
+							</div>
+							<div class="before_contents" onclick="selectAbility(4)">
+								<h4>留学金融</h4>
+							</div>
+							<div class="before_contents" onclick="selectAbility(5)">
+								<h4>航空服务</h4>
+							</div>
+						</div>
+					</div>
+					<div class="in_thestudy">
+						<div class="title">
+							<h2>留学中</h2>
+						</div>
+						<div class="content">
+							<div class="thestudy_contents" onclick="selectAbility(6)">
+								<h4>境外转学</h4>
+							</div>
+							<div class="thestudy_contents" onclick="selectAbility(7)">
+								<h4>升学指导</h4>
+							</div>
+							<div class="thestudy_contents" onclick="selectAbility(8)">
+								<h4>留学安全</h4>
+							</div>
+							<div class="thestudy_contents" onclick="selectAbility(9)">
+								<h4>留学保险</h4>
+							</div>
+							<div class="thestudy_contents" onclick="selectAbility(10)">
+								<h4>海外租房</h4>
+							</div>
+						</div>
+					</div>
+					<div class="after_study_abroad">
+						<div class="title">
+							<h2>留学后</h2>
+						</div>
+						<div class="content">
+							<div class="after_contents" onclick="selectAbility(11)">
+								<h4>学历认证</h4>
+							</div>
+							<div class="after_contents" onclick="selectAbility(12)">
+								<h4>积分落户</h4>
+							</div>
+							<div class="after_contents" onclick="selectAbility(13)">
+								<h4>就业/创业</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		</main>
+		<div class="related_organization">
+			<div class="agency_recommended">
+				<div class="agency_content">
+					<div class="interedu_title">
+						<div class="line"></div>
+						<div class="interedu_titles">
+							<h4>机构推荐</h4>
+							<div class="dynamic_more">
+								<a href="./html/org/list.html">
+									<img src="img/dynamic_more.png" alt="">
+								</a>
+							</div>
+							<span>AGENCY RECCMENDATION</span>
+						</div>
+						<div class="line"></div>
+					</div>
+					<div class="interedu_concent">
+						<!-- 留学过程 -->
+						<div class="abroad_state">
+							<div class="middle_state abroadActive">
+								<font>留学前</font>
+							</div>
+							<div class="middle_state">
+								<font>留学中</font>
+							</div>
+							<div class="middle_state">
+								<font>留学后</font>
+							</div>
+						</div>
+						<!-- 留学详情 -->
+						<div class="service_item">
+							<div class="item_content stateActive">
+								<div class="abroad_service">
+									<div class="item_service contentActive">
+										<img src="img/remind_icon_00.png" alt="">
+										<font>留学咨询及办理</font>
+									</div>
+									<div class="item_service">
+										<img src="img/remind_icon_01.png" alt="">
+										<font>背景提升</font>
+									</div>
+									<div class="item_service">
+										<img src="img/remind_icon_02.png" alt="">
+										<font>艺术留学</font>
+									</div>
+									<div class="item_service">
+										<img src="img/remind_icon_00.png" alt="">
+										<font>留学金融</font>
+									</div>
+									<div class="item_service">
+										<img src="img/remind_icon_03.png" alt="">
+										<font>航空服务</font>
+									</div>
+								</div>
+							</div>
+							<div class="item_content">
+								<div class="abroad_service">
+									<div class="item_service contentActive">
+										<img src="img/remind_icon_00.png" alt="">
+										<font>境外转学</font>
+									</div>
+									<div class="item_service">
+										<img src="img/remind_icon_00.png" alt="">
+										<font>升学指导</font>
+									</div>
+									<div class="item_service">
+										<img src="img/remind_icon_00.png" alt="">
+										<font>留学安全</font>
+									</div>
+									<div class="item_service">
+										<img src="img/remind_icon_00.png" alt="">
+										<font>留学保险</font>
+									</div>
+									<div class="item_service">
+										<img src="img/remind_icon_00.png" alt="">
+										<font>海外租房</font>
+									</div>
+								</div>
+							</div>
+							<div class="item_content">
+								<div class="abroad_service">
+									<div class="item_service contentActive">
+										<img src="img/remind_icon_00.png" alt="">
+										<font>学历认证</font>
+									</div>
+									<div class="item_service">
+										<img src="img/remind_icon_00.png" alt="">
+										<font>积分落户</font>
+									</div>
+									<div class="item_service">
+										<img src="img/remind_icon_00.png" alt="">
+										<font>就业/创业</font>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="institution">
+							<div class="swiper-container container">
+								<div class="swiper-wrapper">
+											<!-- <div class="swiper-slide">
+												<div class="institution_intro">
+													<div class="assessment_certification">
+														<a href="javascript:;">
+															<img src="img/assessment_certification.png">
+														</a>
+													</div>
+													<div class="institution_logo">
+														<img src="img/new_oriental.png">
+													</div>
+													<div class="institution_detail">
+														<h3>新东方留学</h3>
+														<p>服务人数：10000</p>
+														<p>点评：2378</p>
+														<p>综合评分：
+															<span>
+																<font>95</font>分
+															</span>
+														</p>
+														<p><img src="img/star.png"><img src="img/star.png"><img src="img/star.png"><img src="img/star.png"><img src="img/star.png"></p>
+													</div>
+												</div>
+											</div> -->
+								</div>
+								<!-- Add Pagination -->
+								<div class="swiper-pagination"></div>
+								<!-- Add Arrows -->
+								<div class="swiper-button-next"></div>
+								<!-- <div class="swiper-button-prev"></div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="interedu_fair">
+			<div class="membership_img">
+				<div class="member_services">
+				<h3>会员服务</h3>
+				<ul>
+					<li><a href="javascript:;">
+							<div class="member_lists">
+								<img src="img/membership_list.png" alt="">
+								<font>会员名单</font>
+							</div>
+						</a></li>
+					<li><a href="javascript:;">
+							<div class="member_lists">
+								<img src="img/file_downloads.png" alt="">
+								<font>文件下载</font>
+							</div>
+						</a></li>
+				</ul>
+				<div class="member_btn">
+					<button class="member_apply">
+						<font>申请成为会员</font>
+					</button>
+					<button class="member_register">
+						<font>会员登陆</font>
+					</button>
+				</div>
+				</div>
+			</div>
+			
+			<div class="interedu_content">
+				<div class="interedu_title">
+					<div class="line"></div>
+					<div class="interedu_titles">
+						<h4>国际教育展</h4>
+						<div class="dynamic_more">
+							<a href="./html/school/index.html">
+								<img src="img/dynamic_more.png" alt="">
+							</a>
+						</div>
+						<span>INTERNLATICRNAL EDUCATION EXHBITION</span>
+					</div>
+					<div class="line"></div>
+				</div>
+				<div class="interedu_country">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="country">
+									<a href="javascript:;" onclick="selectCountry('美国')">
+										<img src="img/america.png" alt="">
+										<font>美国</font>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="country">
+									<a href="javascript:;" onclick="selectCountry('德国')">
+										<img src="img/germany.png" alt="">
+										<font>德国</font>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="country">
+									<a href="javascript:;" onclick="selectCountry('法国')">
+										<img src="img/france.png" alt="">
+										<font>法国</font>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="country">
+									<a href="javascript:;" onclick="selectCountry('意大利')">
+										<img src="img/italy.png" alt="">
+										<font>意大利</font>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="country">
+									<a href="javascript:;" onclick="selectCountry('荷兰')">
+										<img src="img/netherlands.png" alt="">
+										<font>荷兰</font>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="country">
+									<a href="javascript:;" onclick="selectCountry('瑞士')">
+										<img src="img/switzerland.png" alt="">
+										<font>瑞士</font>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="country">
+									<a href="javascript:;" onclick="selectCountry('俄罗斯')">
+										<img src="img/russia.png" alt="">
+										<font>俄罗斯</font>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- Add Pagination -->
+						<!-- <div class="swiper-pagination"></div> -->
+						<!-- Add Arrows -->
+						<!-- <div class="swiper-button-next"></div> -->
+						<!-- <div class="swiper-button-prev"></div> -->
+					</div>
+				</div>
+				<div class="university">
+					<!-- <div class="university_notability">
+						<a href="javascript:;">
+							<div class="universityimg">
+								<img src="img/harvard_uni.png">
+								<div class="school_badge">
+									<img src="img/harvard_badge.png">
+								</div>
+							</div>
+							<div class="university_intro">
+								<div class="university_detail">
+									<h2>哈弗大学</h2>
+									<ul>
+										<li>属性: 公立大学 社科院</li>
+										<li>学费: <span>￥35000-70000</span></li>
+										<li>招生人数: 300</li>
+										<li>精品专业: 40</li>
+									</ul>
+								</div>
+							</div>
+						</a>
+					</div> -->
+				</div>
+				<div class="relevant_information">
+					<div class="dynamic_state">
+						<div class="dynamic_more">
+							<a href="./html/news/news.html">
+								<img src="img/dynamic_more.png" alt="">
+							</a>
+						</div>
+						<div class="dynamic_tabtitle">
+							<ul>
+								<li>最新动态</li>
+								<li>政策法规</li>
+								<li>行业报告</li>
+							</ul>
+						</div>
+						<div class="dynamic_tabcontent">
+							<div class="dynamic_tabcontents">
+							</div>
+							<div class="policy_tabcontent">
+							</div>
+							<div class="industry_tabcontent">
+							</div>
+						</div>
+					</div>
+					<!-- 留学工具 -->
+					<div class="instrument_state" style="position: relative;">
+						<div class="dynamic_more" style="width: 67px;height: 27px;position: absolute;top: 0;right: 0;">
+							<a href="./html/news/news.html">
+								<img src="img/dynamic_more.png" alt="">
+							</a>
+						</div>
+						<div class="study_abroad_tools">
+							<h4 style="font-size: 16px;">留学预警</h4>
+						</div>
+						<div class="tool" style="width: 100%;padding: 30px 0px 30px 10px;border: 1px solid;border-color: #f4f4f4;    box-shadow: -1px 2px 7px -4px #333;">
+						</div>
+						<div style="margin-top: 10px;">
+							<img width="100%" src="img/page2.png"></img>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="related_organization" style="height: 694px;">
+			<div class="agency_recommended">
+				<div class="committee_experts">
+					<div class="interedu_title">
+						<div class="line"></div>
+						<div class="interedu_titles">
+							<h4>专家委员会</h4>
+							<span>One stop service</span>
+						</div>
+						<div class="line"></div>
+					</div>
+					<div class="committee_content">
+						<div class="committee_contents">
+							<div class="committeeimg">
+								<a href="javascript:;">
+									<img src="img/specialist1.png" alt="">
+								</a>
+							</div>
+							<div class="committe_text">
+								<h3>曹昱晗</h3>
+								<p>近期服务案例<span>09</span>个</p>
+								<button type="button">
+									<font>马上咨询</font>
+								</button>
+							</div>
+						</div>
+						<div class="committee_contents">
+							<div class="committeeimg">
+								<a href="javascript:;">
+									<img src="img/specialist2.png" alt="">
+								</a>
+							</div>
+							<div class="committe_text">
+								<h3>陈屹</h3>
+								<p>近期服务案例<span>03</span>个</p>
+								<button type="button">
+									<font>马上咨询</font>
+								</button>
+							</div>
+						</div>
+						<div class="committee_contents">
+							<div class="committeeimg">
+								<a href="javascript:;">
+									<img src="img/specialist3.png" alt="">
+								</a>
+							</div>
+							<div class="committe_text">
+								<h3>陈志文</h3>
+								<p>近期服务案例<span>09</span>个</p>
+								<button type="button">
+									<font>马上咨询</font>
+								</button>
+							</div>
+						</div>
+						<div class="committee_contents">
+							<div class="committeeimg">
+								<a href="javascript:;">
+									<img src="img/specialist4.png" alt="">
+								</a>
+							</div>
+							<div class="committe_text">
+								<h3>杜素英</h3>
+								<p>近期服务案例<span>09</span>个</p>
+								<button type="button">
+									<font>马上咨询</font>
+								</button>
+							</div>
+						</div>
+						<div class="committee_contents">
+							<div class="committeeimg">
+								<a href="javascript:;">
+									<img src="img/specialist.png" alt="">
+								</a>
+							</div>
+							<div class="committe_text">
+								<h3>杜威</h3>
+								<p>近期服务案例<span>09</span>个</p>
+								<button type="button">
+									<font>马上咨询</font>
+								</button>
+							</div>
+						</div>
+						<div class="committee_contents">
+							<div class="committeeimg">
+								<a href="javascript:;">
+									<img src="img/specialist6.png" alt="">
+								</a>
+							</div>
+							<div class="committe_text">
+								<h3>尹艺蓉</h3>
+								<p>近期服务案例<span>09</span>个</p>
+								<button type="button">
+									<font>马上咨询</font>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="collaborations">
+					<div class="collaborations_content">
+						<div class="collaborations_top">
+							<div class="government_agency">
+								<font><a href="javascript:;">官方政府机构</a></font>
+							</div>
+							<div class="institution_functioning">
+								<font><a href="javascript:;">驻外使（领）馆教育处</a></font>
+							</div>
+							<div class="cooperating_organization">
+								<font><a href="javascript:;">合作单位</a></font>
+							</div>
+							<div class="collaborations_line">
+
+							</div>
+						</div>
+						<div class="collaborations_bottom">
+							<div class="collaborations_img">
+								<a href="javascript:;">
+									<img src="img/education_online.png" alt="">
+								</a>
+							</div>
+							<div class="collaborations_img">
+								<a href="javascript:;">
+									<img src="img/education_optimization.png" alt="">
+								</a>
+							</div>
+							<div class="collaborations_img">
+								<a href="javascript:;">
+									<img src="img/inter_edu_network.png" alt="">
+								</a>
+							</div>
+							<div class="collaborations_img">
+								<a href="javascript:;">
+									<img src="img/staff_officer.png" alt="">
+								</a>
+							</div>
+							<div class="collaborations_img">
+								<a href="javascript:;">
+									<img src="img/jin_gillette.png" alt="">
+								</a>
+							</div>
+							<div class="collaborations_img">
+								<a href="javascript:;">
+									<img src="img/qide_edu.png" alt="">
+								</a>
+							</div>
+							<div class="collaborations_img">
+								<a href="javascript:;">
+									<img src="img/xintong_edu.png" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div class="foot">
+			<div class="footer">
+				<div class="foot_nav">
+					<div class="foot_navleft">
+						<ul>
+							<li><a href="javascript:;">网站首页</a></li>
+							<li><a href="javascript:;">联系我们</a></li>
+							<li><a href="javascript:;">免责声明</a></li>
+							<li><a href="javascript:;">企业合作</a></li>
+							<li><a href="javascript:;">人才招聘</a></li>
+							<li><a href="javascript:;">帮助中心</a></li>
+							<li><a href="javascript:;">意见反馈</a></li>
+							<li><a href="javascript:;">关于我们</a></li>
+						</ul>
+					</div>
+					<div class="foot_navright">
+						<ul>
+							<li><a href="javascript:;"><img src="img/wechat.png"></a></li>
+							<li><a href="javascript:;"><img src="img/qq.png"></a></li>
+							<li><a href="javascript:;"><img src="img/microblog.png"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="foot_copyright">
+					<div class="copyright_left">
+						<ul>
+							<li>地址:中国北京市复兴门内大街160号逸夫会议中心，100031</li>
+							<li>Offipe Address: Yifu Conference Center,No.160,Fuxingmennei Dajie,Beijing,China,100031</li>
+							<li>Tel:010-62603454</li>
+							<li>Fax:010-62603732</li>
+							<li>版权所有 中国教育国际交流协会自费出国留学中介服务分会 京ICP备05031009号协会历史·组织架构·协会条款·协会宗旨</li>
+						</ul>
+					</div>
+					<div class="copyright_right">
+						<div class="copyright_rightimg">
+							<img src="img/authentication.png">
+						</div>
+						<div class="copyright_righttext">
+							<font>京ICP备05064772号</font>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/comAjax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-bundle.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var swiper = new Swiper('.interedu_country .swiper-container', {
+				slidesPerView: 7,
+				spaceBetween: 0,
+				slidesPerGroup: 7,
+				loop: true,
+				loopFillGroupWithBlank: true,
+				// pagination: {
+				// 	el: '.swiper-pagination',
+				// 	clickable: true,
+				// },
+				//navigation: {
+				//	nextEl: '.swiper-button-next',
+				//	prevEl: '.swiper-button-prev',
+				//},
+			});
+			var swiper1 = new Swiper('.institution .swiper-container', {
+				slidesPerView: 4,
+				spaceBetween: 0,
+				slidesPerGroup: 4,
+				loop: true,
+				loopFillGroupWithBlank: true,
+				// pagination: {
+				// 	el: '.swiper-pagination',
+				// 	clickable: true,
+				// },
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+		</script>
+	</body>
+</html>

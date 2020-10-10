@@ -98,12 +98,18 @@ public class CarouselRESTService {
 			@RequestParam(required=false, defaultValue = "0")int page, 
 			@RequestParam(required=false, defaultValue = "0")int limit, 
 			String domain,HttpServletRequest req,HttpServletResponse resp,Model model) {
+		System.out.println("========================getBeans===========================");
 		try {
 			UserRmiVo user = SSOUtils.getUserData(req, resp, userRmiService);
+			System.out.println("+++++++++++++++++getBeans2222222++++++++++++++++++");
 			Map<String, Object> beans = carouselService.getBeans(page, limit, domain, user);
+			System.out.println("+++++++++++++++++3333333++++++++++++++++++");
 			model.addAttribute("data", beans.get("beans"));
+			System.out.println("+++++++++++++++++444444++++++++++++++++++");
 			model.addAttribute("count", beans.get("count").toString());
+			System.out.println("+++++++++++++++++55555++++++++++++++++++");
 			model.addAttribute("status", IWebUtils.SERVER_STATUS_SUCCESS);
+			System.out.println("+++++++++++++++++666666++++++++++++++++++");
 			model.addAttribute("msg", "查询成功！");
 			model.addAttribute("code", 0);
 		} catch (Exception e) {

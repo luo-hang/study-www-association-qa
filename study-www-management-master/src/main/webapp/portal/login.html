@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>全国性出国留学服务平台 - 登录</title>
+  <link rel="stylesheet" type="text/css" href="./css/login.css" />
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./font/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="top-header">
+   <!--  <div class="links">
+      <a href="javascript:;">帮助中心</a>
+      <a href="./org/list.html">机构中心</a>
+      <a href="../user/index.html">个人中心</a>
+      <a href="javascript:;">你好，请登录</a>
+    </div> -->
+  </div>
+  <div class="content">
+    <div class="wrapper">
+      <!-- <div class="logo">
+          <img src="img/logo.png">
+        </div> -->
+      <!-- <img class="bg1" src="img/bg1.png"/> -->
+      <div class="loginBox box1">
+        <div class="formDiv">
+          <p class="title">个人登录</p>
+          <form action="" method="post">
+            <label class="user">
+              <i class="fa fa-user-o" aria-hidden="true"></i>
+              <input type="text" class="userName" placeholder="请输入用户名" />
+            </label>
+            <label class="pwd">
+              <i class="fa fa-lock" aria-hidden="true"></i>
+              <input type="password" placeholder="请输入密码" />
+            </label>
+            <div class="pwdOper">
+              <a class="forget toregister" href="javascript:;">注册</a>
+              <a class="forget toforget" href="javascript:;">忘记密码?</a>
+            </div>
+            <a href="javascript:;" class="submit" >登 录</a>
+          </form>
+        </div>
+      </div>
+      <div class="loginBox box2">
+        <div class="formDiv">
+          <p class="title">忘记密码</p>
+          <form action="" method="post">
+            <label class="user">
+              <input type="text" placeholder="手机号" />
+              <i class="fa fa-mobile" aria-hidden="true"></i>
+            </label>
+            <label class="pwd">
+              <input type="text" placeholder="短信验证码" />
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              <div class="send-code">发送验证码</div>
+            </label>
+            <div class="pwdOper">
+              <a class="forget toregister" href="javascript:;">注册</a>
+              <a class="forget tologin" href="javascript:;">去登录</a>
+            </div>
+            <a href="javascript:;" class="submit" >下 一 步</a>
+          </form>
+        </div>
+      </div>
+      <div class="loginBox box3">
+        <div class="formDiv">
+          <p class="title">注册账号</p>
+          <form action="" method="post">
+            <label class="user">
+              <input class="userName" type="text" placeholder="用户名" />
+              <i class="fa fa-user-o" aria-hidden="true"></i>
+            </label>
+            <label class="user">
+              <input class="password" type="password" placeholder="手机号" />
+              <i class="fa fa-mobile" aria-hidden="true"></i>
+            </label>
+            <label class="user">
+              <input type="text" placeholder="短信验证码" />
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              <div class="send-code">发送验证码</div>
+            </label>
+            <label class="pwd">
+              <i class="fa fa-lock" aria-hidden="true"></i>
+              <input type="password" placeholder="请输入密码(必须包含数组、字母)" />
+            </label>
+            <div class="pwdOper">
+              <a class="forget tologin" href="javascript:;">去登录</a>
+              <a class="forget toforget" href="javascript:;">忘记密码</a>
+            </div>
+            <a href="javascript:;" class="submit">注 册</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span>版权所有 中国教育国际交流协会自费出国留学中介服务分会 京ICP备05031009号协会历史·组织架构·协会条款·协会宗旨</span>
+    </div>
+  </div>
+  </div>
+  <script src="js/jquery.js"></script>
+  <script>
+    $(".tologin").click(function(){
+      $(".loginBox").hide()
+      $(".box1").show()
+    })
+    $(".toforget").click(function(){
+      $(".loginBox").hide()
+      $(".box2").show()
+    })
+    $(".toregister").click(function(){
+      console.log(111111111111)
+      $(".loginBox").hide()
+      $(".box3").show()
+    })
+   /*  $('.userName').keyup(function(event){
+
+		
+		
+		if(event.keyCode === 13){
+			var userNameVal = /^[a-zA-Z0-9_-]{4,16}$/;
+			// console.log(this.val = userNameVal);
+			this.val == userNameVal
+			alert(this)
+			// $(this).attr('type','password')
+		}else {
+			alert('请输入正确的用户名')
+		}
+		
+	}); */
+    
+  </script>
+</body>
+</html>

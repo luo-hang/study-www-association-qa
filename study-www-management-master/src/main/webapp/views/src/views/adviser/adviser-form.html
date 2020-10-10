@@ -1,0 +1,157 @@
+
+<form class="layui-form" lay-filter="layuiadmin-adviser-form"
+	id="layuiadmin-adviser-form" style="padding: 20px 30px 0 0;">
+	<div class="layui-form-item">
+		<label class="layui-form-label lang" data-lang="顾问姓名"><span class="red-star">*</span></label>
+		<div class="layui-input-block">
+			<script type="text/html" template>
+          <input type="text" name="name" value="{{ d.params.name || '' }}" lay-verify="required" placeholder="{{ shiant.l("请输入") }}{{ shiant.l("顾问姓名") }}" autocomplete="off" class="layui-input">
+        </script>
+		</div>
+	</div>
+	<div class="layui-form-item">
+      <label class="layui-form-label lang" data-lang="顾问头像"><span class="red-star">*</span></label>
+      <div class="layui-input-inline" >
+	  	<div class="layui-upload">
+     		<button type="button" class="layui-btn lang" id="cover-upload" data-lang="上传图片"></button>
+       		<div class="layui-upload-list">
+      			<img class="layui-upload-img" id="cover-upload-img" style="width: 200px;" src="">
+          		<p id="cover-upload-text"></p>
+       		</div>
+    	</div> 
+     	<script type="text/html" template>
+			<input type="text" name="coverFile" value="{{ d.params.coverFile || '' }}" class="layui-input" style="display: none;">
+        </script>
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <div class="lang" data-lang="温馨提示" style="color: #c2c2c2;margin:10px 0;padding-left: 100px;"></div>
+    </div>
+    <div class="layui-form-item">
+		<label class="layui-form-label lang" data-lang="顾问职称"><span class="red-star">*</span></label>
+		<div class="layui-input-block">
+			<script type="text/html" template>
+          <input type="text" name="title" value="{{ d.params.title || '' }}" lay-verify="required" placeholder="{{ shiant.l("请输入") }}{{ shiant.l("顾问职称") }}" autocomplete="off" class="layui-input">
+        </script>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label lang" data-lang="教育背景"><span class="red-star">*</span></label>
+		<div class="layui-input-block">
+			<script type="text/html" template>
+          		<textarea id="background" type="text" name="background" lay-verify="required" placeholder="{{ shiant.l("请输入") }}{{ shiant.l("教育背景") }}" autocomplete="off" class="layui-textarea">{{ d.params.background || '' }}</textarea>
+        	</script>
+		</div>
+	</div>
+    <div class="layui-form-item">
+		<label class="layui-form-label lang" data-lang="从业时间"><span class="red-star">*</span></label>
+		<div class="layui-input-block">
+			<script type="text/html" template>
+          <input type="text" name="workingTime" value="{{ d.params.workingTime || '' }}" lay-verify="required" placeholder="{{ shiant.l("请输入") }}{{ shiant.l("从业时间") }}" autocomplete="off" class="layui-input">
+        </script>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label lang" data-lang="主要项目"><span class="red-star">*</span></label>
+		<div class="layui-input-block">
+			<script type="text/html" template>
+          		<textarea id="items" type="text" name="items" lay-verify="required" placeholder="{{ shiant.l("请输入") }}{{ shiant.l("主要项目") }}" autocomplete="off" class="layui-textarea">{{ d.params.items || '' }}</textarea>
+        	</script>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label lang" data-lang="擅长领域"><span class="red-star">*</span></label>
+		<div class="layui-input-block">
+		<script type="text/html" template>
+	      <input type="radio" name="ability1" value="留学咨询及办理" title="{{ shiant.l("留学咨询及办理") }}" {{d.params.ability1?"checked":""}}>
+	      <input type="radio" name="ability2" value="背景提升" title="{{ shiant.l("背景提升") }}" {{d.params.ability2?"checked":""}}>
+	      <input type="radio" name="ability3" value="艺术留学" title="{{ shiant.l("艺术留学") }}" {{d.params.ability3?"checked":""}}>
+	      <input type="radio" name="ability6" value="留学金融" title="{{ shiant.l("留学金融") }}" {{d.params.ability4?"checked":""}}>
+	      <input type="radio" name="ability4" value="航空服务" title="{{ shiant.l("航空服务") }}" {{d.params.ability5?"checked":""}}>
+		  <hr class="layui-bg-gray">
+	      <input type="radio" name="ability5" value="境外转学" title="{{ shiant.l("境外转学") }}" {{d.params.ability6?"checked":""}}>
+	      <input type="radio" name="ability7" value="升学指导" title="{{ shiant.l("升学指导") }}" {{d.params.ability7?"checked":""}}>
+	      <input type="radio" name="ability8" value="留学安全" title="{{ shiant.l("留学安全") }}" {{d.params.ability8?"checked":""}}>
+	      <input type="radio" name="ability9" value="留学保险" title="{{ shiant.l("留学保险") }}" {{d.params.ability9?"checked":""}}>
+	      <input type="radio" name="ability10" value="海外租房" title="{{ shiant.l("海外租房") }}" {{d.params.ability10?"checked":""}}>
+	      <hr class="layui-bg-gray">
+ 		  <input type="radio" name="ability11" value="学历认证" title="{{ shiant.l("学历认证") }}" {{d.params.ability11?"checked":""}}>
+	      <input type="radio" name="ability12" value="积分落户" title="{{ shiant.l("积分落户") }}" {{d.params.ability12?"checked":""}}>
+	      <input type="radio" name="ability13" value="就业/创业" title="{{ shiant.l("就业/创业") }}" {{d.params.ability13?"checked":""}}>
+		</script>
+	    </div>
+	</div>
+    <div class="layui-form-item">
+		<label class="layui-form-label lang" data-lang="所在城市"><span class="red-star">*</span></label>
+		<div class="layui-input-block">
+			<script type="text/html" template>
+          <input type="text" name="city" value="{{ d.params.city || '' }}" lay-verify="required" placeholder="{{ shiant.l("请输入") }}{{ shiant.l("所在城市") }}" autocomplete="off" class="layui-input">
+        </script>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label lang" data-lang="顾问简介"><span class="red-star">*</span></label>
+		<div class="layui-input-block">
+			<script type="text/html" template>
+          		<textarea id="content" type="text" name="content" lay-verify="content" placeholder="{{ shiant.l("请输入") }}{{ shiant.l("顾问简介") }}" autocomplete="off" class="layui-textarea">{{ d.params.content || '' }}</textarea>
+        	</script>
+		</div>
+	</div>
+	<script type="text/html" template>
+      <input type="hidden" name="aid" value="{{ d.params.aid || '' }}">
+    </script>
+	<div class="layui-form-item">
+		<label class="layui-form-label"></label>
+		<div class="layui-input-inline">
+			<input type="button" lay-submit lay-filter="layuiadmin-adviser-form-submit" value="确认" class="layui-btn">
+		</div>
+	</div>
+</form>
+<script type="text/html" template lay-done="layui.data.sendParams(d.params)">
+</script>
+<script>
+layui.data.sendParams = function(params){
+	layui.use([ 'admin', 'upload', 'form', 'layedit' ], function() {
+	    upload = layui.upload
+		layarea = layui.layarea;
+	    layedit = layui.layedit;
+		form = layui.form;
+		
+		/* debugger;
+		form.val('layuiadmin-adviser-form', {"content": params.content});
+		$('textarea[name="content"]').val(params.content); */
+
+	    var uploadImgInst = upload.render({
+	      elem: '#cover-upload'
+	      ,url: shiant.getResHttpPrefix()+'/image?path=/study/management/adviser/cover'
+	      ,accept: 'images'
+	      ,acceptMime: 'image/*'
+	      ,size: 1024*3 
+	      ,before: function(obj){
+	    	layer.msg(shiant.l("上传中"),{time:200000});
+	        obj.preview(function(index, file, result){
+	          $('#cover-upload-img').attr('src', result); //图片链接（base64）
+	        });
+	      }
+	      ,done: function(res){
+	        //如果上传失败
+	        if(res.code > 0){
+	          return layer.msg(shiant.l('上传失败'));
+	        }
+	        layer.close(layer.index);
+	        //上传成功
+	        $('input[name="coverFile"]').val(res.url);
+	      }
+	      ,error: function(){
+	        //演示失败状态，并实现重传
+	        var demoText = $('#cover-upload-text');
+	        demoText.html('<span style="color: #FF5722;">'+shiant.l("上传失败")+'</span> <a class="layui-btn layui-btn-mini cover-reload">'+shiant.l("重试")+'</a>');
+	        demoText.find('.cover-reload').on('click', function(){
+	        	uploadImgInst.upload();
+	        });
+	      }
+	    });
+	    
+	});
+}
+</script>
